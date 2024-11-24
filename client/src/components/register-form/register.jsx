@@ -1,24 +1,32 @@
 import {useForm} from "react-hook-form"
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import { BiHide } from "react-icons/bi";
 import { BiShowAlt } from "react-icons/bi";
-import Calendar from 'react-calendar';
+import "./register.css"
 
 
-
-export default function LogIn (){
-    const [showPassword, setShowPassword] = useState(false)
-    const [date, setDate] = useState(null)
-    const {formState: {errors}, register, reset, handleSubmit} = useForm()
+export default function RegisterForm (){
+    const [showPassword, setShowPassword] = useState(true)
+    const {formState: {errors}, register, watch ,reset, handleSubmit} = useForm()
 
     const handleShowHide = () => {
-        setShowPassword(!showPassword)
+        setShowPassword(!showPassword) 
     }
 
+    const submit = (data) => {
+        console.log(data)
+    }
+
+
+    console.log(errors)
+
+    const passValue = watch("password")
+    const confValue = watch("confirmPass")
+
     return(
-        <>
-            <form id="logInForm">
-            <h1 id="logInFormTitle">Bienvenido a Financial.ai</h1>
+        <>  
+            <form id="registerForm" onSubmit={handleSubmit(submit)}>
+            <h1 id="registerFormTitle">Bienvenido a Financial.ai</h1>
             <p id="accountExists">Ya tienes una cuenta? <a>Logueate</a></p>
             <label 
             htmlFor="firstNameInput" 
@@ -29,7 +37,7 @@ export default function LogIn (){
             type="text"
             id="firstNameInput"
             maxLength="60"
-            {...register("fullName", {required: "Ingrese su nombre completo"})}
+            {...register("firstName", {required: "Ingrese su/s nombre/s"})}
             />
 
             <label 
@@ -41,11 +49,16 @@ export default function LogIn (){
             type="text"
             id="lastNameInput"
             maxLength="60"
-            {...register("fullName", {required: "Ingrese su nombre completo"})}
+            {...register("lastName", {required: "Ingrese su/s apellido/s"})}
             />
 
-            <label id="calendarLabel">Fecha de Nacimiento:</label>
-            <Calendar id="birthDateCalendar" onChange={setDate} value={date} />
+            <label id="datePickerLabel">Fecha de Nacimiento:</label>
+            <input 
+            aria-label="Date" 
+            type="date" 
+            id="datePicker"
+            {...register("birthDate", {required: "Ingrese su fecha de nacimiento"})}
+            />
 
             <label 
             htmlFor="emailInput" 
@@ -63,33 +76,36 @@ export default function LogIn (){
             }})}
             />
 
+            <span id="passSpan">
             <label 
             htmlFor="passwordInput" 
             id="passwordInputLabel">
             Contraseña:
             </label>
             {showPassword ? 
-            <div onClick={handleShowHide}>
-            <BiHide id="iconHide"/>
-            <p id="hidePass">Ocultar</p>
-            </div>
-            :
-            <div onClick={handleShowHide}>
+            <div onClick={handleShowHide} id="divShowPass">
             <BiShowAlt id="iconShow"/> 
             <p id="showPass">Mostrar</p> 
             </div>
+            :
+            <div onClick={handleShowHide} id="divHidePass">
+            <BiHide id="iconHide"/>
+            <p id="hidePass">Ocultar</p>
+            </div>
              }
+             </span>
+
             <input 
             type={showPassword ? "password" : "text"}
             id="passwordInput"
-            maxLength="60"
+            maxLength="60"            
             {...register("password", {required: "Ingrese su nombre completo",
             minLength:{
                 value:8,
                 message: "La contraseña debe tener al menos 8 caracteres"
             },
             pattern:{
-                value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/,
+                value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/,
                 message: "La contraseña no cumple con los requisitos"
             }})}
             />
@@ -102,41 +118,45 @@ export default function LogIn (){
                     <li>Una minúscula</li>
                 </ul>
             </div>
+            
 
+            <span id="showConfirmSpan">
             <label 
             htmlFor="confirmPasswordInput" 
-            id="passwordInputLabel">
+            id="confirmInputLabel">
             Confirmar contraseña:
             </label>
             {showPassword ? 
-            <div onClick={handleShowHide}>
-            <BiHide id="iconHide"/>
-            <p id="hidePass">Ocultar</p>
-            </div>
-            :
-            <div onClick={handleShowHide}>
+            <div onClick={handleShowHide} id="divShowConf">
             <BiShowAlt id="iconShow"/> 
             <p id="showPass">Mostrar</p> 
             </div>
+            :
+            <div onClick={handleShowHide} id="divHideConf">
+            <BiHide id="iconHide"/>
+            <p id="hidePassText">Ocultar</p>
+            </div>
              }
+            </span>
+
             <input 
             type={showPassword ? "password" : "text"}
             id="confirmPasswordInput"
             maxLength="60"
-            {...register("password", {required: "Ingrese su nombre completo",
+            {...register("confirmPass", {required: "Por favor, confirme su contraseña",
             minLength:{
                 value:8,
                 message: "La contraseña debe tener al menos 8 caracteres"
             },
             pattern:{
-                value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/,
+                value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/,
                 message: "La contraseña no cumple con los requisitos"
             }})}
             />
 
            <p id="termsAndPolicies">Al crear una cuenta, usted acepta los <a>términos de uso</a> y las <a>políticas de privacidad</a>.</p> 
 
-            <button type="submit">Registrarse</button>
+            <button type="submit" id="submitButton">Registrarse</button>
             
 
             </form>

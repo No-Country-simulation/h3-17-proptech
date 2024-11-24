@@ -1,0 +1,127 @@
+@media (max-device-width: 480px) and (orientation: portrait){
+#registerForm{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 80%;
+    max-width: 80%;
+    align-content: center;
+}
+
+#registerForm #registerFormTitle{
+    text-align: left;
+    width: 60%;
+    margin-bottom: 0%;
+    font-size: 130%;
+}
+
+#registerForm #accountExists{
+    text-align: left;
+    position: relative;
+    font-size: 70%;
+}
+
+#registerForm #passSpan #divHidePass,
+#divShowPass
+{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    height: 2vh;
+    max-height: 2vh;
+    position:relative;
+    font-size: 1.3vh;
+    align-items: center;
+}
+
+#registerForm #showConfirmSpan #divHideConf,
+#divShowConf{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    height: 2vh;
+    max-height: 2vh;
+    position:relative;
+    font-size: 1.3vh;
+    align-items: center;
+}
+
+#registerForm #firstNameLabel,
+#lastNameLabel,
+#datePickerLabel,
+#emailInputLabel,
+#passwordInputLabel,
+#confirmInputLabel{
+    font-size: 70%;
+    text-align: left
+}
+
+#registerForm #passwordRequirements{
+    font-size: 65%;
+    text-align: left;
+    width:100%;
+    position: relative;
+    right: 10%;
+}
+
+#registerForm #passwordRequirements #requirementsList {
+    align-items: left;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr); /* Dos columnas de igual tamaño */
+    grid-template-rows: repeat(3, auto); /* Tres filas con altura automática */
+    column-gap: 10%; /* Espaciado opcional entre elementos */
+}
+
+
+#registerForm #firstNameInput,
+#lastNameInput,
+#emailInput,
+#datePicker,
+#passwordInput,
+#confirmPasswordInput{
+    width: 90%;
+    max-width: 90%
+}
+
+#firstNameLabel,
+#lastNameLabel, 
+#datePickerLabel, 
+#emailInputLabel, 
+#passwordInputLabel,
+#confirmInputLabel{
+    position:relative;
+    text-align: left;
+}
+
+#registerForm #passSpan{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-content:baseline;
+}
+
+#registerForm #showConfirmSpan{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#registerForm #termsAndPolicies{
+    font-size: 70%;
+    text-align: left;
+    width: 90%
+}
+
+#registerForm #submitButton{
+    width: 55%;
+    height: 10%;
+    max-height:10% ;
+    color: white;
+    background-color: grey;
+}
+}
+
+
