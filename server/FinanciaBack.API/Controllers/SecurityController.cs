@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using FinanciaBack.BLL;
+using System.Security.Claims;
 
 namespace FinanciaBack.API.Controllers
 {
@@ -49,7 +50,7 @@ namespace FinanciaBack.API.Controllers
                 {                    
                     var login = await _jwtSecurityManager.LoginAsync(_jwtSettings, _userManager, _signInManager, model);
 
-                    return login.Success ? Ok(new { message = "Login Successful", token = login.Token }) : BadRequest("Invalid login attempt");
+                    return login.Success ? Ok(new { message = "Login Successful", token = login.Token, role = RequestRole(User)  }) : BadRequest("Invalid login attempt");
                 }
                 catch (Exception ex)
                 {
@@ -133,7 +134,7 @@ namespace FinanciaBack.API.Controllers
 
                         var login = await _jwtSecurityManager.LoginAsync(_jwtSettings, _userManager, _signInManager, loginVM);
 
-                        return Ok(new { Message = "User registered successfully", login.Token});
+                        return Ok(new { Message = "User registered successfully", token = login.Token, role = model.Role});
                     }
                     else
                     {
@@ -196,6 +197,15 @@ namespace FinanciaBack.API.Controllers
                 throw new InvalidOperationException($"Can't create an instance of '{nameof(UserEF)}'. " +
                     $"Ensure that '{nameof(UserEF)}' is not an abstract class and has a parameterless constructor");
             }
+        }
+
+        [ApiExplorerSettings(IgnoreApi = true)]
+        private string RequestRole(ClaimsPrincipal user)
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.Role);
+
+            return claim.Value;
         }
 
         private IUserEmailStore<UserEF> GetEmailStore()
