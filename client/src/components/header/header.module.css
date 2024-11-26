@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #110f14 !important;
+}
+/* Desktop version */
+.desktopVersion {
+  display: flex;
+  flex-direction: column;
+}
+.mobileVersion {
+  display: none;
+}
+.searchBar {
+  width: 295px;
+  max-width: 295px;
+  height: 37.22px;
+  padding: 2px 8px;
+  background: white;
+  border-radius: 8px;
+}
+.searchIcon {
+  color: gray;
+  cursor: pointer;
+}
+.logo {
+  width: 126px;
+  height: 33px;
+}
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+.firstToolbar {
+  display: flex;
+  padding-inline: 10%;
+  justify-content: space-between;
+  gap: 20px;
+}
+.secondToolbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-inline: 20%;
+  align-items: center;
+}
+.subButtonsContainer {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.subButton {
+  font-family: Poppins !important;
+  margin: 3% !important;
+  font-weight: 100 !important;
+}
+
+/* Mobile version */
+@media (max-width: 768px) {
+  .desktopVersion {
+    display: none; 
+  }
+  .mobileVersion {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+  .searchMobile,
+  .mobileToolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+  .menuButton {
+    display: flex;
+    margin-right: 1em;
+    width: 2em;
+    align-items: center;
+  }
+  .searchBarMobile {
+    width: 100%;
+    padding: 8px;
+    padding: 2px 8px;
+    background: white;
+    border-radius: 8px;
+  }
+
+
+
