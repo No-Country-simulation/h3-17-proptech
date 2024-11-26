@@ -84,9 +84,9 @@
     align-items: center;
   }
   .searchBarMobile {
-    width: 100%;
-    padding: 8px;
+    width: 95%;
     padding: 2px 8px;
+    margin-inline: 2.5%;
     background: white;
     border-radius: 8px;
   }
