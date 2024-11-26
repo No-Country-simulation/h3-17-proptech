@@ -1,0 +1,46 @@
+/* variables.css */
+:root {
+    /* Paleta de colores principales */
+    --color-primary-900: #005555;
+    --color-primary-800: #008080;
+    --color-primary-700: #4FBDBA;
+    --color-primary-600: #7CD1CD;
+    --color-primary-500: #B3E5E5;
+  
+    --color-secondary-900: #B89023;
+    --color-secondary-800: #D2A746;
+    --color-secondary-700: #EFC670;
+    --color-secondary-600: #F8E0B5;
+    --color-secondary-500: #FAF4E2;
+  
+    --color-tertiary-900: #C05000;
+    --color-tertiary-800: #FF8500;
+    --color-tertiary-700: #FFA733;
+    --color-tertiary-600: #FFCF80;
+    --color-tertiary-500: #FFE8C4;
+  
+    /* Escala de grises */
+    --gray-900: #212121;
+    --gray-800: #424242;
+    --gray-700: #616161;
+    --gray-600: #757575;
+    --gray-500: #9E9E9E;
+    --gray-400: #BDBDBD;
+    --gray-300: #E0E0E0;
+    --gray-200: #EEEEEE;
+    --gray-100: #F5F5F5;
+    --gray-50: #FAFAFA;
+  
+    /* Colores de alertas y estados */
+    --color-success: #0CC247;
+    --color-info: #0C4CBA;
+    --color-warning: #F7B60A;
+    --color-error: #F95333;
+    --color-disabled: #DEDEDE;
+    --color-disabled-button: #B7BAC1;
+  
+    /* Background */
+    --background-1: #121212;
+    --background-2: #232323;
+    --background-3: #333333;
+  }
