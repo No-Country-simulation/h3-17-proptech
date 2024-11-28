@@ -23,7 +23,6 @@ export const Footer = () => {
               src="https://via.placeholder.com/262x44"
               alt="logo"
             />
-            <Divider />
           </div>
           <div className={styles.contact}>
             <ul>
