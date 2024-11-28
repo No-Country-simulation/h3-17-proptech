@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import {
   FaLocationDot,
   FaPhone,
