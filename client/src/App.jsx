@@ -1,9 +1,7 @@
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
-import RegisterForm from "./components/register-form/register";
-import { Header } from "./components/header/header";
-import { Footer } from "./components/footer/footer";
 
+import { useState } from 'react'
+import {Routes, Route} from "react-router-dom"
+import LandingPage from './pages/landing/landing';
 import "./App.css";
 import "@fontsource/poppins/200.css";
 import "@fontsource/poppins/400.css";
@@ -16,7 +14,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route exact path="/" element={<RegisterForm />} />
+        <Route exact path="/" element={<LandingPage />} />
       </Routes>
       <Footer />
     </>
