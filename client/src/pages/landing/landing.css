@@ -1,0 +1,114 @@
+@import "../../colors.css";
+
+@media (min-device-width: 1024px) {
+#landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#landing #landingTop{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    align-items: center;
+}
+
+#landing #landingTop #mainImg{
+    width: 45vw;
+    min-width: 45vw;
+    max-width: 45vw;
+    height: 60vh;
+    min-height: 60vh;
+    max-height: 60vh;
+}
+
+#landing #landingTop #topTitle{
+    font-size: 200%
+}
+
+#landing #landingTop #topButton{
+    background-color: var(--color-primary-800);
+    color: black;
+    font-weight: bold;
+    padding: 0.6em 1.2em;
+    width:40%
+}
+
+#landing #landingTop #topText{
+    font-size: 90%;
+    color: var(--gray-600)
+}
+
+#landing #smartInv{
+    margin-top: 5%;
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+    height: 60vh;
+    min-height: 60vh;
+    max-height: 60vh;
+    border: 2px white solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#landing #smartInv #smartInvAside{
+    align-content: center;
+    width: 45%
+}
+#landing #smartInv #smartInvAside #invIconDiv{
+    border: 4px green solid;
+    height: 7vh
+}
+
+#landing #smartInv #smartInvAside #invIconDiv #graphLineIcon{
+    background-color: var(--color-tertiary-600);
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+#landing #smartInv #smartInvImg{
+    width: 20vw;
+    height: 40vh
+}
+}
+
+
+@media (max-device-width: 480px) and (orientation: portrait){
+    #landingTop{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    #landingTop #mainImg{
+        width: 45vw;
+        min-width: 45vw;
+        max-width: 45vw;
+        height: 30vh;
+        min-height: 30vh;
+        max-height: 30vh;
+    }
+
+    #landingTop #topTitle{
+        font-size:200%;
+        position: relative;
+        right: 9%;
+        width:120%;
+    }
+
+    #landingTop #topButton{
+        background-color: var(--color-primary-800);
+        color: black;
+        font-weight: bold;
+        width: 80%; 
+
+    }
+}

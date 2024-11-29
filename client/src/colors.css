@@ -1,46 +1,28 @@
 /* variables.css */
 :root {
     /* Paleta de colores principales */
-    --color-primary-900: #005555;
-    --color-primary-800: #008080;
-    --color-primary-700: #4FBDBA;
-    --color-primary-600: #7CD1CD;
-    --color-primary-500: #B3E5E5;
-  
-    --color-secondary-900: #B89023;
-    --color-secondary-800: #D2A746;
-    --color-secondary-700: #EFC670;
-    --color-secondary-600: #F8E0B5;
-    --color-secondary-500: #FAF4E2;
-  
-    --color-tertiary-900: #C05000;
-    --color-tertiary-800: #FF8500;
-    --color-tertiary-700: #FFA733;
-    --color-tertiary-600: #FFCF80;
-    --color-tertiary-500: #FFE8C4;
-  
-    /* Escala de grises */
-    --gray-900: #212121;
-    --gray-800: #424242;
-    --gray-700: #616161;
-    --gray-600: #757575;
-    --gray-500: #9E9E9E;
-    --gray-400: #BDBDBD;
-    --gray-300: #E0E0E0;
-    --gray-200: #EEEEEE;
-    --gray-100: #F5F5F5;
-    --gray-50: #FAFAFA;
-  
-    /* Colores de alertas y estados */
-    --color-success: #0CC247;
-    --color-info: #0C4CBA;
-    --color-warning: #F7B60A;
-    --color-error: #F95333;
-    --color-disabled: #DEDEDE;
-    --color-disabled-button: #B7BAC1;
-  
-    /* Background */
-    --background-1: #121212;
-    --background-2: #232323;
-    --background-3: #333333;
-  }
+--Primario: #2A9D8F;
+--Primario-20:#154F48;
+--Primario-30:#1C695F;
+--Primario-80:#B8DEDA;
+--Primario-90:#D4EBE9;
+
+--Secundario:#E9C46A;
+--Secundario-20:#756235;
+--Secundario-30: rgba(155, 131, 71, 0.3);
+--Secundario-80: rgba(248, 235, 205, 0.8);
+--Secundario-90:#FBF3E1;
+
+--Terciario:#F77F00;
+--Terciario-20:#7C4000;
+--Terciario-30:#A55500;
+--Terciario-80:#FCD4AA;
+--Terciario-90:#FDE5CC;
+
+--Texto:#EAEAEA;
+
+--Fondo-1:#110F14;
+--Fondo-2:#211E27;
+--Fondo-3:#46444B;
+
+}
