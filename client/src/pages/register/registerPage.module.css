@@ -1,0 +1,51 @@
+.register {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 170px;
+  box-sizing: border-box;
+}
+.image {
+  display: flex;
+  width: 50%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.image img {
+  width: 100%;
+  height: auto;
+}
+.form {
+  display: flex;
+  width: 50%;
+}
+.registerForm {
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin-inline: 5%;
+}
+@media (max-width: 768px) {
+  .register {
+    top: 120px;
+  }
+  .registerForm {
+    display: flex;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  .image {
+    display: none;
+  }
+  .form {
+    display: flex;
+    width: 100%;
+  }
+}
