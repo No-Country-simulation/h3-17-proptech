@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import RegisterForm from "./components/register-form/register";
+import Register from "./pages/register/registerPage";
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<RegisterForm />} />
+        <Route exact path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </>
