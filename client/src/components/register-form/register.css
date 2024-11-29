@@ -1,5 +1,5 @@
-@media (max-device-width: 480px) and (orientation: portrait){
-#registerForm{
+/* @media (max-device-width: 480px) and (orientation: portrait) {
+  #registerForm {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -7,137 +7,324 @@
     max-width: 80%;
     align-content: center;
     justify-content: space-between;
-}
+  }
 
-
-#registerForm #registerFormTitle{
+  #registerForm #registerFormTitle {
     text-align: left;
     width: 60%;
     margin-bottom: 0%;
-    font-size: 130%;
-}
+    font-size: 100%;
+  }
 
-#registerForm #accountExists{
+  #registerForm #accountExists {
     text-align: left;
     position: relative;
     font-size: 70%;
     margin-bottom: 16px;
-}
+  }
 
-#registerForm #passSpan #divHidePass,
-#divShowPass
-{
+  #registerForm #passSpan #divHidePass,
+  #divShowPass {
     display: flex;
     flex-direction: row;
     width: 25%;
     height: 2vh;
     max-height: 2vh;
-    position:relative;
+    position: relative;
     font-size: 1.3vh;
     align-items: center;
-}
+  }
 
-#registerForm #showConfirmSpan #divHideConf,
-#divShowConf{
+  #registerForm #showConfirmSpan #divHideConf,
+  #divShowConf {
     display: flex;
     flex-direction: row;
     width: 25%;
     height: 2vh;
     max-height: 2vh;
-    position:relative;
+    position: relative;
     font-size: 1.3vh;
     align-items: center;
-}
+  }
 
-#registerForm #firstNameLabel,
-#lastNameLabel,
-#datePickerLabel,
-#emailInputLabel,
-#passwordInputLabel,
-#confirmInputLabel{
+  #registerForm #firstNameLabel,
+  #lastNameLabel,
+  #datePickerLabel,
+  #emailInputLabel,
+  #passwordInputLabel,
+  #confirmInputLabel {
     font-size: 70%;
-    text-align: left
-}
+    text-align: left;
+  }
 
-#registerForm #firstNameInput,
-#lastNameInput,
-#datePicker,
-#emailInput,
-#passwordInput,
-#confirmPasswordInput{
+  #registerForm #firstNameInput,
+  #lastNameInput,
+  #datePicker,
+  #emailInput,
+  #passwordInput,
+  #confirmPasswordInput {
     height: 26px;
     margin-bottom: 16px;
-}
+  }
 
-#registerForm #passwordRequirements{
+  #registerForm #passwordRequirements {
     font-size: 65%;
     text-align: left;
-    width:100%;
+    width: 100%;
     position: relative;
     right: 10%;
-}
+  }
 
-#registerForm #passwordRequirements #requirementsList {
+  #registerForm #passwordRequirements #requirementsList {
     align-items: left;
     text-align: left;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(3, auto); 
-    column-gap: 50px; 
-    row-gap: 7px;    
+    grid-template-rows: repeat(3, auto);
+    column-gap: 50px;
+    row-gap: 7px;
     margin-bottom: 16px;
-}
+  }
 
-
-#registerForm #firstNameInput,
-#lastNameInput,
-#emailInput,
-#datePicker,
-#passwordInput,
-#confirmPasswordInput{
+  #registerForm #firstNameInput,
+  #lastNameInput,
+  #emailInput,
+  #datePicker,
+  #passwordInput,
+  #confirmPasswordInput {
     width: 90%;
     max-width: 90%;
-    border-radius: 3%
-}
+    border-radius: 3%;
+  }
 
-#firstNameLabel,
-#lastNameLabel, 
-#datePickerLabel, 
-#emailInputLabel, 
-#passwordInputLabel,
-#confirmInputLabel{
-    position:relative;
+  #firstNameLabel,
+  #lastNameLabel,
+  #datePickerLabel,
+  #emailInputLabel,
+  #passwordInputLabel,
+  #confirmInputLabel {
+    position: relative;
     text-align: left;
-}
+  }
 
-#registerForm #passSpan{
-    display:flex;
+  #registerForm #passSpan {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    align-content:baseline;
-}
+    align-content: baseline;
+  }
 
-#registerForm #showConfirmSpan{
-    display:flex;
+  #registerForm #showConfirmSpan {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-}
+  }
 
-#registerForm #termsAndPolicies{
+  #registerForm #termsAndPolicies {
     font-size: 70%;
     text-align: left;
-    width: 90%
-}
+    width: 90%;
+  }
 
-#registerForm #submitButton{
+  #registerForm #submitButton {
     width: 55%;
     height: 10%;
-    max-height:10% ;
+    max-height: 10%;
     color: white;
     background-color: grey;
-}
-}
+  }
+} */
 
+@media (max-device-width: 480px) and (orientation: portrait) {
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 80%;
+    max-width: 80%;
+    align-content: center;
+    justify-content: space-between;
+  }
 
+  .registerFormTitle {
+    text-align: left;
+    width: 65%;
+    margin-bottom: 16px;
+    font-size: 100%;
+  }
+
+  .accountExists {
+    text-align: left;
+    position: relative;
+    font-size: 70%;
+    margin-bottom: 16px;
+  }
+
+  .passSpan .divHidePass,
+  .divShowPass {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    height: 2vh;
+    max-height: 2vh;
+    position: relative;
+    font-size: 1.3vh;
+    align-items: center;
+  }
+
+  .showConfirmSpan .divHideConf,
+  .divShowConf {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    height: 2vh;
+    max-height: 2vh;
+    position: relative;
+    font-size: 1.3vh;
+    align-items: center;
+  }
+
+  .inputLabel {
+    font-size: 70%;
+    text-align: left;
+  }
+
+  .textInput {
+    height: 26px;
+    margin-bottom: 16px;
+    width: 90%;
+    max-width: 90%;
+    border-radius: 3%;
+  }
+
+  .passwordRequirements {
+    font-size: 65%;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    right: 10%;
+  }
+
+  .requirementsList {
+    align-items: left;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 50px;
+    row-gap: 7px;
+    margin-bottom: 16px;
+  }
+
+  .passSpan,
+  .showConfirmSpan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .termsAndPolicies {
+    font-size: 70%;
+    text-align: left;
+    width: 90%;
+  }
+
+  .submitButton {
+    width: 55%;
+    height: 10%;
+    max-height: 10%;
+    color: white;
+    background-color: grey;
+  }
+}
+@media (min-width: 481px) {
+  .registerForm {
+    width: 90%;
+    margin-inline: 5%;
+  }
+  .registerFormTitle {
+    font-size: 130%;
+    margin-block: 1px;
+  }
+  .accountExists {
+    font-size: 80%;
+    margin-block: 1px;
+    margin-bottom: 5%;
+  }
+  .textInput {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 35px;
+    border-style: solid;
+    margin-bottom: 20px;
+    padding: 8px;
+  }
+  .inputLabel {
+    width: 100%;
+    font-size: 90%;
+    text-align: left !important;
+    margin-bottom: 5px;
+  }
+  .passSpan,
+  .showConfirmSpan {
+    display: flex;
+    flex-direction: row;
+  }
+  .divShowPass,
+  .divHidePass,
+  .divShowConf,
+  .divHideConf {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+  }
+  .divShowPass p,
+  .divHidePass p,
+  .divShowConf p,
+  .divHideConf p {
+    margin-block: 0;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 85%;
+  }
+  .iconHide,
+  .iconShow {
+    margin: 0;
+    padding: 0;
+  }
+  .requirementsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 5px;
+    margin-top: 0;
+    text-align: left;
+    width: 100%;
+  }
+  .requirementsList li {
+    flex: 1 1 200px;
+    white-space: nowrap;
+    font-size: 80%;
+    text-align: left;
+  }
+  .termsAndPolicies {
+    width: 100%;
+    font-size: 85%;
+    margin-block: 30px;
+    text-align: center;
+  }
+  .submitButton {
+    width: 100%;
+    background-color: var(--color-primary-900);
+  }
+  .submitButton hover {
+    background-color: var(--color-primary-800);
+  }
+}
