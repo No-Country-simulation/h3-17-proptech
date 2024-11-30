@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   left: 0;
-  top: 170px;
   box-sizing: border-box;
 }
 .image {
@@ -31,10 +30,8 @@
   margin-inline: 5%;
 }
 @media (max-width: 768px) {
-  .register {
-    top: 120px;
-  }
   .registerForm {
+    margin-block: 5%;
     display: flex;
     width: 100%;
     height: auto;
