@@ -1,8 +1,12 @@
-.header {
+.headerApp {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
-  background-color: #110f14 !important;
+  background-color: var(--Fondo-1);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 /* Desktop version */
 .desktopVersion {
@@ -17,11 +21,11 @@
   max-width: 295px;
   height: 37.22px;
   padding: 2px 8px;
-  background: white;
+  background: var(--Texto);
   border-radius: 8px;
 }
 .searchIcon {
-  color: gray;
+  color: var(--Fondo-3);
   cursor: pointer;
 }
 .logo {
@@ -62,7 +66,7 @@
 /* Mobile version */
 @media (max-width: 768px) {
   .desktopVersion {
-    display: none; 
+    display: none;
   }
   .mobileVersion {
     display: flex;
@@ -70,26 +74,50 @@
   }
 }
 
-  .searchMobile,
-  .mobileToolbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 95%;
-  }
-  .menuButton {
-    display: flex;
-    margin-right: 1em;
-    width: 2em;
-    align-items: center;
-  }
-  .searchBarMobile {
-    width: 95%;
-    padding: 2px 8px;
-    margin-inline: 2.5%;
-    background: white;
-    border-radius: 8px;
-  }
-
-
-
+.searchMobile,
+.mobileToolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+}
+.menuButton {
+  display: flex;
+  margin-right: 1em;
+  width: 2em;
+  align-items: center;
+}
+.searchBarMobile {
+  width: 95%;
+  padding: 2px 8px;
+  margin-inline: 2.5%;
+  background: var(--Texto);
+  border-radius: 8px;
+}
+/* Buttons */
+.buttonRegister {
+  flex: 1 !important;
+  font-family: Poppins !important;
+  border: 2px solid var(--Primario) !important;
+  color: var(--Texto) !important;
+  padding: 8px 25px !important;
+  border-radius: 8px !important;
+  background-color: transparent !important;
+}
+.buttonRegister:hover {
+  background-color: var(--Primario) !important;
+}
+.buttonLogin {
+  flex: 1 !important;
+  font-family: Poppins !important;
+  color: var(--Fondo-1) !important;
+  padding: 8px 25px !important;
+  border-radius: 8px !important;
+  background-color: var(--Primario) !important;
+  box-shadow: none !important;
+}
+.buttonLogin:hover {
+  background-color: var(--Primario-20) !important;
+  color: var(--Texto) !important;
+  box-shadow: none !important;
+}
