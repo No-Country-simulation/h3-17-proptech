@@ -83,6 +83,11 @@
   height: 50px;
 }
 /* area 3 */
+.sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .copyrights {
   display: flex;
   flex-direction: column;
@@ -96,7 +101,19 @@
   font-size: smaller;
   margin-inline: 20px;
 }
-
+/* Button */
+.buttonFoot {
+  flex: 1 !important;
+  font-family: Poppins !important;
+  border: 2px solid var(--Primario) !important;
+  color: var(--Texto) !important;
+  padding: 8px 25px !important;
+  border-radius: 8px !important;
+  background-color: transparent !important;
+}
+.buttonFoot:hover {
+  background-color: var(--Primario) !important;
+}
 .area1,
 .area2,
 .area3 {
