@@ -8,6 +8,9 @@
   left: 0;
   box-sizing: border-box;
 }
+.reverse {
+  flex-direction: row-reverse;
+}
 .image {
   display: flex;
   width: 50%;
@@ -22,6 +25,9 @@
 .form {
   display: flex;
   width: 50%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .registerForm {
   display: flex;
@@ -29,7 +35,7 @@
   height: auto;
   margin-inline: 5%;
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) and (orientation: portrait) {
   .registerForm {
     margin-block: 5%;
     display: flex;

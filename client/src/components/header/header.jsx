@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Toolbar,
   Button,
@@ -10,7 +11,9 @@ import {
 } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import { IoSearch, IoMenu } from "react-icons/io5";
+
 import styles from "./header.module.css";
+import { logoFinancial } from "../../assets";
 
 export const Header = () => {
   /*open/close mobile menu:*/
@@ -39,25 +42,29 @@ export const Header = () => {
           <div className={styles.logo}>
             <img
               style={{ width: "100%", height: "100%" }}
-              src="https://via.placeholder.com/126x33"
-              alt="logo"
+              src={logoFinancial}
+              alt="logo Financial"
             />
           </div>
           <div className={styles.buttonsContainer}>
-            <Button
-              variant="outlined"
-              className={styles.buttonRegister}
-              size="small"
-            >
-              Registrarse
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              className={styles.buttonLogin}
-            >
-              Login
-            </Button>
+            <Link to="/register-options">
+              <Button
+                variant="outlined"
+                className={styles.buttonRegister}
+                size="small"
+              >
+                Registrarse
+              </Button>
+            </Link>
+            <Link>
+              <Button
+                variant="contained"
+                size="small"
+                className={styles.buttonLogin}
+              >
+                Login
+              </Button>
+            </Link>
           </div>
         </Toolbar>
         <Toolbar className={styles.secondToolbar}>
@@ -84,7 +91,7 @@ export const Header = () => {
       <div className={styles.mobileVersion}>
         <Toolbar className={styles.mobileToolbar}>
           <div className={styles.logo}>
-            <img src="https://via.placeholder.com/126x33" alt="logo" />
+            <img src={logoFinancial} alt="logo Financial" />
           </div>
 
           <IconButton
@@ -94,7 +101,7 @@ export const Header = () => {
             aria-expanded={open ? "true" : undefined}
             onClick={handleClick}
           >
-            <IoMenu color="white" fontSize="1.5em" />
+            <IoMenu className={styles.menuIcon} />
           </IconButton>
           <Menu
             id="basic-menu"
@@ -105,7 +112,9 @@ export const Header = () => {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleClose}>Registrarse</MenuItem>
+            <Link to="/register-options">
+              <MenuItem onClick={handleClose}>Registrarse</MenuItem>
+            </Link>
             <MenuItem onClick={handleClose}>Login</MenuItem>
           </Menu>
         </Toolbar>

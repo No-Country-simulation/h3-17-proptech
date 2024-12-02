@@ -7,6 +7,7 @@ import {
   FaCircleArrowRight,
 } from "react-icons/fa6";
 
+import { logoFinancial } from "../../assets";
 import styles from "./footer.module.css";
 
 export const Footer = () => {
@@ -14,15 +15,10 @@ export const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.footerDesktop}>
         <div className={styles.area1}>
-          <div className={styles.logo}>
-            <img
-              style={{
-                width: "262px",
-                height: "44px",
-              }}
-              src="https://via.placeholder.com/262x44"
-              alt="logo"
-            />
+          <div className={styles.logoArea}>
+            <div className={styles.logo}>
+              <img src={logoFinancial} alt="logo" />
+            </div>
           </div>
           <div className={styles.contact}>
             <ul>

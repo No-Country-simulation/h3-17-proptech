@@ -1,6 +1,7 @@
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 import { Routes, Route } from "react-router-dom";
+import { RegisterOptions } from "./pages/register-options/registerOption";
 import LandingPage from "./pages/landing/landing";
 import Register from "./pages/register/registerPage";
 import "./App.css";
@@ -21,6 +22,11 @@ function App() {
           <Routes>
             <Route exact path="/" element={<LandingPage />} />
             <Route exact path="/register" element={<Register />} />
+            <Route
+              exact
+              path="/register-options"
+              element={<RegisterOptions />}
+            />
           </Routes>
         </main>
         <footer>
