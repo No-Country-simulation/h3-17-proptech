@@ -1,7 +1,5 @@
-import React from "react";
 import { useState } from "react";
 import {
-  AppBar,
   Toolbar,
   Button,
   InputBase,
@@ -25,7 +23,7 @@ export const Header = () => {
     setAnchorEl(null);
   };
   return (
-    <AppBar className={styles.header}>
+    <div className={styles.headerApp}>
       {/* Menu desktop */}
       <div className={styles.desktopVersion}>
         <Toolbar className={styles.firstToolbar}>
@@ -48,37 +46,15 @@ export const Header = () => {
           <div className={styles.buttonsContainer}>
             <Button
               variant="outlined"
+              className={styles.buttonRegister}
               size="small"
-              sx={{
-                flex: "1",
-                fontFamily: "Poppins",
-                border: "2px solid #2a9d8f",
-                color: "white",
-                padding: "8px 25px",
-                borderRadius: "8px",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "#2a9d8f" },
-              }}
             >
               Registrarse
             </Button>
             <Button
               variant="contained"
               size="small"
-              sx={{
-                flex: "1",
-                fontFamily: "Poppins",
-                color: "#110f14",
-                padding: "8px 25px",
-                borderRadius: "8px",
-                backgroundColor: "#2a9d8f",
-                boxShadow: "none",
-                "&:hover": {
-                  backgroundColor: "#238378",
-                  color: "white",
-                  boxShadow: "none",
-                },
-              }}
+              className={styles.buttonLogin}
             >
               Login
             </Button>
@@ -146,6 +122,6 @@ export const Header = () => {
           />
         </Toolbar>
       </div>
-    </AppBar>
+    </div>
   );
 };

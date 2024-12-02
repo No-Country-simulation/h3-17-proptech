@@ -1,31 +1,150 @@
-import {useForm} from "react-hook-form"
-import {useState, useEffect} from "react"
+import { useForm } from "react-hook-form";
+import { useState, useEffect } from "react";
 import { BiHide } from "react-icons/bi";
 import { BiShowAlt } from "react-icons/bi";
-import "./register.css"
+import "./register.css";
 
+export default function RegisterForm() {
+  const [showPassword, setShowPassword] = useState(true);
+  const {
+    formState: { errors },
+    register,
+    watch,
+    reset,
+    handleSubmit,
+  } = useForm();
 
-export default function RegisterForm (){
-    const [showPassword, setShowPassword] = useState(true)
-    const {formState: {errors}, register, watch ,reset, handleSubmit} = useForm()
+  const handleShowHide = () => {
+    setShowPassword(!showPassword);
+  };
 
-    const handleShowHide = () => {
-        setShowPassword(!showPassword) 
-    }
+  const submit = (data) => {
+    console.log(data);
+  };
 
-    const submit = (data) => {
-        console.log(data)
-    }
+  console.log(errors);
 
+  const passValue = watch("password");
+  const confValue = watch("confirmPass");
 
-    console.log(errors)
+  return (
+    <>
+      <form className="registerForm" onSubmit={handleSubmit(submit)}>
+        <h1 className="registerFormTitle">Bienvenido a Financial.ai</h1>
+        <p className="accountExists">
+          Ya tienes una cuenta? <a>Logueate</a>
+        </p>
 
-    const passValue = watch("password")
-    const confValue = watch("confirmPass")
+        <label htmlFor="firstNameInput" className="inputLabel">
+          Nombre/s:
+        </label>
+        <input
+          type="text"
+          id="firstNameInput"
+          className="textInput"
+          {...register("firstName", { required: "Ingrese su/s nombre/s" })}
+        />
 
-    return(
-        <>  
-            <form id="registerForm" onSubmit={handleSubmit(submit)}>
+        <label htmlFor="lastNameInput" className="inputLabel">
+          Apellido/s:
+        </label>
+        <input
+          type="text"
+          id="lastNameInput"
+          className="textInput"
+          {...register("lastName", { required: "Ingrese su/s apellido/s" })}
+        />
+
+        <label className="inputLabel">Fecha de Nacimiento:</label>
+        <input
+          aria-label="Date"
+          type="date"
+          id="datePicker"
+          className="textInput"
+          {...register("birthDate", {
+            required: "Ingrese su fecha de nacimiento",
+          })}
+        />
+
+        <label htmlFor="emailInput" className="inputLabel">
+          Correo Electrónico:
+        </label>
+        <input
+          type="text"
+          id="emailInput"
+          className="textInput"
+          {...register("email", {
+            required: "Ingrese su dirección de correo electrónico",
+          })}
+        />
+
+        <span className="passSpan">
+          <label htmlFor="passwordInput" className="inputLabel">
+            Contraseña:
+          </label>
+          {showPassword ? (
+            <div onClick={handleShowHide} className="divShowPass">
+              <BiShowAlt className="iconShow" />
+              <p>Mostrar</p>
+            </div>
+          ) : (
+            <div onClick={handleShowHide} className="divHidePass">
+              <BiHide className="iconHide" />
+              <p>Ocultar</p>
+            </div>
+          )}
+        </span>
+        <input
+          type={showPassword ? "password" : "text"}
+          id="passwordInput"
+          className="textInput"
+          {...register("password", { required: "Ingrese su contraseña" })}
+        />
+
+        <div className="passwordRequirements">
+          <ul className="requirementsList">
+            <li>Mínimo 8 caracteres</li>
+            <li>Un símbolo</li>
+            <li>Una mayúscula</li>
+            <li>Un número</li>
+            <li>Una minúscula</li>
+          </ul>
+        </div>
+
+        <span className="showConfirmSpan">
+          <label htmlFor="confirmPasswordInput" className="inputLabel">
+            Confirmar contraseña:
+          </label>
+          {showPassword ? (
+            <div onClick={handleShowHide} className="divShowConf">
+              <BiShowAlt className="iconShow" />
+              <p>Mostrar</p>
+            </div>
+          ) : (
+            <div onClick={handleShowHide} className="divHideConf">
+              <BiHide className="iconHide" />
+              <p>Ocultar</p>
+            </div>
+          )}
+        </span>
+        <input
+          type={showPassword ? "password" : "text"}
+          id="confirmPasswordInput"
+          className="textInput"
+          {...register("confirmPass", { required: "Confirme su contraseña" })}
+        />
+
+        <p className="termsAndPolicies">
+          Al crear una cuenta, usted acepta los <a>términos de uso</a> y las{" "}
+          <a>políticas de privacidad</a>.
+        </p>
+
+        <button type="submit" className="submitButton">
+          Registrarse
+        </button>
+      </form>
+
+      {/* <form id="registerForm" onSubmit={handleSubmit(submit)}>
             <h1 id="registerFormTitle">Bienvenido a Financial.ai</h1>
             <p id="accountExists">Ya tienes una cuenta? <a>Logueate</a></p>
             <label 
@@ -159,8 +278,7 @@ export default function RegisterForm (){
             <button type="submit" id="submitButton">Registrarse</button>
             
 
-            </form>
-        </>
-    )
-
+            </form> */}
+    </>
+  );
 }
