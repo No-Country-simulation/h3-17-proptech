@@ -6,10 +6,10 @@
   padding: 0;
   width: 100%;
   height: auto;
-  background-color: var(--background-1);
+  background-color: var(--Fondo-1);
   border-top-style: solid;
   border-width: 1px;
-  border-color: var(--color-primary-800);
+  border-color: var(--Primario);
 }
 .footerDesktop {
   display: flex;
@@ -17,7 +17,7 @@
   justify-content: center;
 }
 /* area 1 */
-.logo {
+.logoArea {
   display: flex;
   width: 100%;
   height: auto;
@@ -26,8 +26,13 @@
   margin-right: 0;
   border-bottom-style: solid;
   border-width: 1px;
-  border-color: var(--color-primary-800);
+  border-color: var(--Primario);
   padding-block: 1rem;
+}
+.logo{
+  width: 100%;
+  height: 33px;
+  margin-bottom:1em;
 }
 
 .contact {
@@ -55,7 +60,7 @@
 /* area 2 */
 .area2 {
   border-style: solid;
-  border-color: var(--color-primary-800);
+  border-color: var(--Primario);
   border-top: none;
   border-bottom: none;
   border-width: 1px;
@@ -75,7 +80,7 @@
   width: 100%;
   justify-content: center;
   border-bottom-style: solid;
-  border-color: var(--color-primary-800);
+  border-color: var(--Primario);
   border-width: 1px;
 }
 .buttonFoot {
@@ -125,7 +130,7 @@
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 1095px) {
+@media (max-width: 768px) {
   .footerDesktop {
     flex-direction: column;
     align-items: center;
@@ -139,11 +144,11 @@
     padding: 0.5em;
     box-sizing: border-box;
   }
-  .logo {
+  .logoArea {
     width: 100%;
     border-bottom-style: solid;
     border-width: 1px;
-    border-color: var(--color-primary-500);
+    border-color: var(--Primario-90);
     margin-inline: 0em 0;
     padding-block: 1rem;
   }
