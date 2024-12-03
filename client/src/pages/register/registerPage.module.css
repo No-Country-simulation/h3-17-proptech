@@ -35,6 +35,7 @@
   height: auto;
   margin-inline: 5%;
 }
+
 @media (max-width: 480px) and (orientation: portrait) {
   .registerForm {
     margin-block: 5%;
