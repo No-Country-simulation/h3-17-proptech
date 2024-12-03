@@ -16,7 +16,7 @@ export default function Register() {
       </div>
       <div className={styles.form}>
         <div className={styles.registerForm}>
-          <RegisterForm />
+          <RegisterForm role={role} />
         </div>
       </div>
     </div>
