@@ -239,6 +239,11 @@
     color: white;
     background-color: grey;
   }
+  .error {
+    color: var(---Error);
+    font-size: 0.9rem;
+    margin: 3px;
+  }
 }
 @media (min-width: 481px) {
   .registerForm {
@@ -322,9 +327,10 @@
   }
   .submitButton {
     width: 100%;
-    background-color: var(--color-primary-900);
+    height: 2.5em;
+    background-color: var(--Primario);
   }
-  .submitButton hover {
-    background-color: var(--color-primary-800);
+  .submitButton:hover {
+    background-color: var(--Primario-30);
   }
 }
