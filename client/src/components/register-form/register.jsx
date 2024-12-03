@@ -1,10 +1,10 @@
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useState, useEffect } from "react";
-import { BiHide } from "react-icons/bi";
-import { BiShowAlt } from "react-icons/bi";
+import { BiHide, BiShowAlt } from "react-icons/bi";
+
 import "./register.css";
 
-export default function RegisterForm() {
+export default function RegisterForm({ role }) {
   const [showPassword, setShowPassword] = useState(true);
   const {
     formState: { errors },
@@ -12,14 +12,16 @@ export default function RegisterForm() {
     watch,
     reset,
     handleSubmit,
-  } = useForm();
+  } = useForm({ mode: "all" });
 
   const handleShowHide = () => {
     setShowPassword(!showPassword);
   };
 
   const submit = (data) => {
-    console.log(data);
+    const formData = { ...data, role };
+    console.log(formData);
+    reset();
   };
 
   console.log(errors);
@@ -44,7 +46,17 @@ export default function RegisterForm() {
           className="textInput"
           {...register("firstName", { required: "Ingrese su/s nombre/s" })}
         />
-
+        {errors.firstName && (
+          <p
+            style={{
+              color: "var(---Error)",
+              fontSize: "0.7rem",
+              marginTop: "0px",
+            }}
+          >
+            {errors.firstName.message}
+          </p>
+        )}
         <label htmlFor="lastNameInput" className="inputLabel">
           Apellido/s:
         </label>
@@ -54,7 +66,17 @@ export default function RegisterForm() {
           className="textInput"
           {...register("lastName", { required: "Ingrese su/s apellido/s" })}
         />
-
+        {errors.lastName && (
+          <p
+            style={{
+              color: "var(---Error)",
+              fontSize: "0.7rem",
+              marginTop: "0px",
+            }}
+          >
+            {errors.lastName.message}
+          </p>
+        )}
         <label className="inputLabel">Fecha de Nacimiento:</label>
         <input
           aria-label="Date"
@@ -65,6 +87,17 @@ export default function RegisterForm() {
             required: "Ingrese su fecha de nacimiento",
           })}
         />
+        {errors.birthDate && (
+          <p
+            style={{
+              color: "var(---Error)",
+              fontSize: "0.7rem",
+              marginTop: "0px",
+            }}
+          >
+            {errors.birthDate.message}
+          </p>
+        )}
 
         <label htmlFor="emailInput" className="inputLabel">
           Correo Electrónico:
@@ -75,9 +108,23 @@ export default function RegisterForm() {
           className="textInput"
           {...register("email", {
             required: "Ingrese su dirección de correo electrónico",
+            pattern: {
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message: "Correo electrónico inválido",
+            },
           })}
         />
-
+        {errors.email && (
+          <p
+            style={{
+              color: "var(---Error)",
+              fontSize: "0.7rem",
+              marginTop: "0px",
+            }}
+          >
+            {errors.email.message}
+          </p>
+        )}
         <span className="passSpan">
           <label htmlFor="passwordInput" className="inputLabel">
             Contraseña:
@@ -98,10 +145,38 @@ export default function RegisterForm() {
           type={showPassword ? "password" : "text"}
           id="passwordInput"
           className="textInput"
-          {...register("password", { required: "Ingrese su contraseña" })}
+          {...register("password", {
+            required: "Ingrese su contraseña",
+            minLength: {
+              value: 8,
+              message: "La contraseña debe tener al menos 8 caracteres",
+            },
+            pattern: {
+              value: /[A-Z]/,
+              message: "Debe tener al menos una mayúscula",
+            },
+            validate: {
+              lowercase: (value) =>
+                /[a-z]/.test(value) || "Debe tener al menos una minúscula",
+              number: (value) =>
+                /\d/.test(value) || "Debe tener al menos un número",
+              symbol: (value) =>
+                /[\W_]/.test(value) || "Debe tener al menos un símbolo",
+            },
+          })}
         />
-
-        <div className="passwordRequirements">
+        {errors.password && (
+          <p
+            style={{
+              color: "var(---Error)",
+              fontSize: "0.7rem",
+              marginTop: "0px",
+            }}
+          >
+            {errors.password.message}
+          </p>
+        )}
+        {/* <div className="passwordRequirements">
           <ul className="requirementsList">
             <li>Mínimo 8 caracteres</li>
             <li>Un símbolo</li>
@@ -109,7 +184,7 @@ export default function RegisterForm() {
             <li>Un número</li>
             <li>Una minúscula</li>
           </ul>
-        </div>
+        </div> */}
 
         <span className="showConfirmSpan">
           <label htmlFor="confirmPasswordInput" className="inputLabel">
@@ -131,9 +206,23 @@ export default function RegisterForm() {
           type={showPassword ? "password" : "text"}
           id="confirmPasswordInput"
           className="textInput"
-          {...register("confirmPass", { required: "Confirme su contraseña" })}
+          {...register("confirmPass", {
+            required: "Confirme su contraseña",
+            validate: (value) =>
+              value === passValue || "Las contraseñas no coinciden",
+          })}
         />
-
+        {errors.confirmPass && (
+          <p
+            style={{
+              color: "var(---Error)",
+              fontSize: "0.7rem",
+              marginTop: "0px",
+            }}
+          >
+            {errors.confirmPass.message}
+          </p>
+        )}
         <p className="termsAndPolicies">
           Al crear una cuenta, usted acepta los <a>términos de uso</a> y las{" "}
           <a>políticas de privacidad</a>.
