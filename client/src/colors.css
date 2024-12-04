@@ -1,11 +1,12 @@
 /* variables.css */
 :root {
-  /* Paleta de colores principales */
-  --Primario: #2a9d8f;
-  --Primario-20: #154f48;
-  --Primario-30: #1c695f;
-  --Primario-80: #b8deda;
-  --Primario-90: #d4ebe9;
+    /* Paleta de colores principales */
+--Primario: #2A9D8F;
+--Primario-20:#154F48;
+--Primario-30:#1C695F;
+--Primario-40: gray;
+--Primario-80:#B8DEDA;
+--Primario-90:#D4EBE9;
 
   --Secundario: #e9c46a;
   --Secundario-20: #756235;
