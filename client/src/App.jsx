@@ -1,9 +1,11 @@
-import { Header } from "./components/header/header";
-import { Footer } from "./components/footer/footer";
 import { Routes, Route } from "react-router-dom";
-import { RegisterOptions } from "./pages/register-options/registerOption";
-import LandingPage from "./pages/landing/landing";
-import Register from "./pages/register/registerPage";
+import { HeaderComponent, FooterComponent } from "./components/index";
+import {
+  LandingPage,
+  RegisterOptions,
+  RegisterPage,
+  LoginPage,
+} from "./pages/index";
 import "./App.css";
 import "@fontsource/poppins/200.css";
 import "@fontsource/poppins/400.css";
@@ -16,21 +18,22 @@ function App() {
     <>
       <div className="appContainer">
         <header>
-          <Header />
+          <HeaderComponent />
         </header>
         <main>
           <Routes>
             <Route exact path="/" element={<LandingPage />} />
-            <Route exact path="/register" element={<Register />} />
             <Route
               exact
               path="/register-options"
               element={<RegisterOptions />}
             />
+            <Route exact path="/register" element={<RegisterPage />} />
+            <Route exact path="/login" element={<LoginPage />} />
           </Routes>
         </main>
         <footer>
-          <Footer />
+          <FooterComponent />
         </footer>
       </div>
     </>
