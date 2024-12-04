@@ -1,9 +1,9 @@
 import styles from "./registerPage.module.css";
-import RegisterForm from "../../components/register-form/register";
+import { RegisterFormComponent } from "../../components/index";
 import { useLocation } from "react-router-dom";
 import { investorImg, buyerImg } from "../../assets";
 
-export default function Register() {
+export function RegisterPage() {
   const location = useLocation();
   const role = location.state?.role || "investor";
   console.log("Role:", role);
@@ -16,7 +16,7 @@ export default function Register() {
       </div>
       <div className={styles.form}>
         <div className={styles.registerForm}>
-          <RegisterForm role={role} />
+          <RegisterFormComponent role={role} />
         </div>
       </div>
     </div>
