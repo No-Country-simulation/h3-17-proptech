@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { BiHide, BiShowAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 import "./register.css";
 
-export default function RegisterForm({ role }) {
+export function RegisterForm({ role }) {
   const [showPassword, setShowPassword] = useState(true);
   const {
     formState: { errors },
@@ -34,7 +35,10 @@ export default function RegisterForm({ role }) {
       <form className="registerForm" onSubmit={handleSubmit(submit)}>
         <h1 className="registerFormTitle">Bienvenido a Financial.ai</h1>
         <p className="accountExists">
-          Ya tienes una cuenta? <a>Logueate</a>
+          Ya tienes una cuenta?
+          <Link to="/login">
+            <a>Logueate</a>
+          </Link>
         </p>
 
         <label htmlFor="firstNameInput" className="inputLabel">
@@ -108,10 +112,6 @@ export default function RegisterForm({ role }) {
           className="textInput"
           {...register("email", {
             required: "Ingrese su dirección de correo electrónico",
-            pattern: {
-              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-              message: "Correo electrónico inválido",
-            },
           })}
         />
         {errors.email && (
