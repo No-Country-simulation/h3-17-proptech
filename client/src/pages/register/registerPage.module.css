@@ -38,9 +38,10 @@
 
 @media (max-width: 480px) and (orientation: portrait) {
   .registerForm {
-    margin-block: 5%;
     display: flex;
+    margin-block: 5%;
     width: 100%;
+    padding-inline: 0px;
     height: auto;
     box-sizing: border-box;
     justify-content: center;
@@ -51,5 +52,11 @@
   .form {
     display: flex;
     width: 100%;
+  }
+  .formContent {
+    display: flex;
+    margin: 0;
+  }
+  .sliderContent {
   }
 }
