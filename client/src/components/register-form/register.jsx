@@ -10,6 +10,11 @@ import {
 
 import "./register.css";
 
+const formatBirthDate = (date) => {
+  const [year, month, day] = date.split("-");
+  return `${day}/${month}/${year}`;
+};
+
 export function RegisterForm({ role }) {
   const [showPassword, setShowPassword] = useState(true);
   const dispatch = useDispatch();
@@ -27,7 +32,14 @@ export function RegisterForm({ role }) {
   };
 
   const submit = (data) => {
-    const formData = { ...data, role };
+    const formData = {
+      ...data,
+      birthDate: formatBirthDate(data.birthDate),
+      role,
+      isSocialLogin: false,
+      loginTypeId: 0,
+    };
+
     console.log(formData);
     dispatch(registerUser(formData));
     reset();
@@ -55,9 +67,7 @@ export function RegisterForm({ role }) {
         <h1 className="registerFormTitle">Bienvenido a Financial.ai</h1>
         <p className="accountExists">
           Ya tienes una cuenta?
-          <Link to="/login">
-            <a>Logueate</a>
-          </Link>
+          <Link to="/login">Logueate</Link>
         </p>
 
         <label htmlFor="firstNameInput" className="inputLabel">
@@ -67,7 +77,7 @@ export function RegisterForm({ role }) {
           type="text"
           id="firstNameInput"
           className="textInput"
-          {...register("firstName", { required: "Ingrese su/s nombre/s" })}
+          {...register("name", { required: "Ingrese su/s nombre/s" })}
         />
         {errors.firstName && (
           <p
@@ -215,7 +225,7 @@ export function RegisterForm({ role }) {
           type={showPassword ? "password" : "text"}
           id="confirmPasswordInput"
           className="textInput"
-          {...register("confirmPass", {
+          {...register("confirmPassword", {
             required: "Confirme su contraseña",
             validate: (value) =>
               value === passValue || "Las contraseñas no coinciden",
@@ -233,8 +243,8 @@ export function RegisterForm({ role }) {
           </p>
         )}
         <p className="termsAndPolicies">
-          Al crear una cuenta, usted acepta los <a>términos de uso</a> y las{" "}
-          <a>políticas de privacidad</a>.
+          Al crear una cuenta, usted acepta los términos de uso y las políticas
+          de privacidad.
         </p>
 
         <button type="submit" className="submitButton" disabled={loading}>
