@@ -50,7 +50,7 @@ export function LoginForm() {
             className={`${styles.textInput} ${
               errors?.email ? styles.error : ""
             }`}
-            {...register("email", {
+            {...register("username", {
               required: {
                 value: true,
                 message: "Ingrese su dirección de correo electrónico",
@@ -138,9 +138,7 @@ export function LoginForm() {
             </button>
             <p>
               Nuevo en Financial{" "}
-              <Link to="/register-options">
-                <a>REGISTRATE AQUÍ</a>
-              </Link>
+              <Link to="/register-options">REGISTRATE AQUÍ</Link>
             </p>
           </div>
         </div>
