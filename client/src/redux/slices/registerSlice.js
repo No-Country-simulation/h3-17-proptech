@@ -4,7 +4,7 @@ export const registerUser = createAsyncThunk(
   "register/registerUser",
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await fetch("https://tuapi.com/register", {
+      const response = await fetch("https://www.financiaback.somee.com/api/Security/Register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
