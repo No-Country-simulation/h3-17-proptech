@@ -14,12 +14,16 @@ export const login = createAsyncThunk(
       });
 
       if (!response.ok) {
-        throw new Error("Login fallido");
+        const errorDetails = await response.json();
+        console.log("Error del servidor:", errorDetails); // Log del error del servidor
+        throw new Error(errorDetails.message || "Login fallido");
       }
 
-      const data = await response.json(); // Asume que el token viene en data.token
-      return data; // Esto será la carga útil (payload) para el reducer extra
+      const data = await response.json();
+      console.log("Respuesta del servidor:", data); // Log de la respuesta exitosa
+      return data; // Devuelve la respuesta para el reducer
     } catch (error) {
+      console.error("Error de login:", error.message); // Log del error capturado
       return rejectWithValue(error.message);
     }
   }

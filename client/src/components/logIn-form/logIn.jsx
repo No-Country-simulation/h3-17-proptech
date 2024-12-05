@@ -4,11 +4,15 @@ import { BiShowAlt, BiHide } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple, FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../redux/slices/loginSlice";
 
 import styles from "./login.module.css";
 
 export function LoginForm() {
   const [showPassword, setShowPassword] = useState(true);
+  const dispatch = useDispatch();
+  const { isLoading, error } = useSelector((state) => state.login);
   const handleShowHide = () => {
     setShowPassword(!showPassword);
   };
@@ -16,13 +20,17 @@ export function LoginForm() {
     register,
     formState: { errors, isValid },
     handleSubmit,
+    reset,
   } = useForm({ mode: "onChange" });
 
   console.log(errors);
 
   const loginSubmit = (data) => {
-    const loginData = { data };
+    console.log("Formulario enviado");
+    const loginData = data;
     console.log(loginData);
+    dispatch(login(loginData));
+    reset();
   };
 
   return (
@@ -103,8 +111,12 @@ export function LoginForm() {
               <p>Olvidaste tu contraseña?</p>
             </span>
           </div>
-          <button className={styles.sendButton} disabled={!isValid}>
-            Enviar
+          <button
+            type="submit"
+            className={styles.sendButton}
+            disabled={!isValid || isLoading}
+          >
+            {isLoading ? "Cargando..." : "Enviar"}
           </button>
           <div className={styles.divisor}>
             <hr />

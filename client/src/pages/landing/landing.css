@@ -1,53 +1,59 @@
-@import "../../colors.css";
+/* @import "../../colors.css";
 
 /* DESKTOP */
 @media (min-device-width: 1024px) {
-#landing{
+  #landing {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-}
+    background-color: var(--Fondo-1);
+  }
 
-/* ¡Financia terrenos, transforma vidas! */
-#landing #landingTop{
+  /* ¡Financia terrenos, transforma vidas! */
+  #landing #landingTop {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-width: 100%;
     max-width: 100%;
     align-items: center;
-}
-
-#landing #landingTop #mainImg{
+  }
+  #landing #landingTop #mainImgContent {
     width: 45vw;
-    min-width: 45vw;
-    max-width: 45vw;
     height: 60vh;
-    min-height: 60vh;
-    max-height: 60vh;
-}
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  #landing #landingTop #mainImg {
+    width: 45vw;
+    height: auto;
+  }
 
-#landing #landingTop #topTitle{
-    font-size: 5.5vh
-}
+  #landing #landingTop #topTitle {
+    font-size: 5.5vh;
+  }
 
-#landing #landingTop #topButton{
+  #landing #landingTop #topButton {
     background-color: var(--Primario);
     color: black;
     font-weight: bold;
     padding: 0.6em 1.2em;
-    width:40%
-}
+    width: 40%;
+  }
 
-#landing #landingTop #topText{
+  #landing #landingTop #topText {
     font-size: 2.2vh;
-    
-}
+    text-align: center;
+    margin-top: 0;
+  }
 
-/* Inversión Inteligente */
-#landing #smartInv{
+  /* Inversión Inteligente */
+  #landing #smartInv {
     margin-top: 5%;
-    width:78vw;
-    min-width:78vw;
-    max-width:78vw;
+    width: 78vw;
+    min-width: 78vw;
+    max-width: 78vw;
     height: 60vh;
     min-height: 60vh;
     max-height: 60vh;
@@ -55,51 +61,56 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 8%
-}
+    margin-top: 8%;
+    border-radius: 20px;
+    background-color: var(--Fondo-2);
+  }
 
-#landing #smartInv #smartInvAside{
+  #landing #smartInv #smartInvAside {
     display: flex;
     flex-direction: column;
     width: 35%;
-}
-#landing #smartInv #smartInvAside #invIconDiv{
+  }
+  #landing #smartInv #smartInvAside #invIconDiv {
     height: 6vh;
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-}
+    gap: 0.5em;
+  }
 
-#landing #smartInv #smartInvAside #invIconDiv #graphLineIcon{
+  #landing #smartInv #smartInvAside #invIconDiv #graphLineIcon {
     background-color: var(--Secundario);
-    width: 27%;
-    height: 100%;
-    justify-content: center;
+    box-sizing: border-box;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
     align-content: center;
-    border-radius: 5%
-}
+    border-radius: 10%;
+  }
 
-#landing #smartInv #smartInvAside #invIconDiv #invest{
+  #landing #smartInv #smartInvAside #invIconDiv #invest {
     font-weight: 200;
     font-size: 2.5vh;
-    color: var(--Secundario)
-}
+    color: var(--Secundario);
+  }
 
-#landing #smartInv #smartInvAside #titleInvestment{
+  #landing #smartInv #smartInvAside #titleInvestment {
     text-align: left;
     color: var(--Primario-80);
     font-size: 3.5vh;
-}
+    margin-bottom: 0px;
+  }
 
-#landing #smartInv #smartInvAside #investText{
-    text-align: left; 
+  #landing #smartInv #smartInvAside #investText {
+    text-align: justify;
     font-size: 1.8vh;
-    color: var(--Primario-40)
-}
+    color: var(--Texto);
+  }
 
-#landing #smartInv #smartInvImg{
+  #landing #smartInv #smartInvImg {
     width: 28vw;
     min-width: 28vw;
     max-width: 28vw;
@@ -107,20 +118,20 @@
     min-height: 40vh;
     max-height: 40vh;
     border-radius: 7%;
-}
+  }
 
-#landing #smartInv #smartInvAside #investButton{
+  #landing #smartInv #smartInvAside #investButton {
     background-color: var(--Primario);
     color: black;
     font-weight: bold;
-    width: 210px;
+    width: 300px;
     height: 58px;
     align-self: first baseline;
-}
+  }
 
-/* Tu sueño, nuestra misión */
+  /* Tu sueño, nuestra misión */
 
-#landing #finanDream{
+  #landing #finanDream {
     width: 78vw;
     min-width: 78vw;
     max-width: 78vw;
@@ -132,479 +143,528 @@
     justify-content: space-around;
     align-items: center;
     position: relative;
-    margin-top: 8%
-}
+    margin-top: 8%;
+    border-radius: 20px;
+    background-color: var(--Fondo-2);
+  }
 
-#landing #finanDream #finanDreamAside{
+  #landing #finanDream #finanDreamAside {
     align-content: center;
     width: 35%;
     display: flex;
     flex-direction: column;
-}
-#landing #finanDream #finanDreamAside #finanDreamIconDiv{
+  }
+  #landing #finanDream #finanDreamAside #finanDreamIconDiv {
     height: 6vh;
     width: 45%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
+    gap: 0.5em;
+  }
 
-}
-
-#landing #finanDream #finanDreamAside #finanDreamIconDiv #finanDreamIcon{
+  #landing #finanDream #finanDreamAside #finanDreamIconDiv #finanDreamIcon {
     background-color: var(--Secundario);
-    width: 23%;
-    height: 100%;
-    justify-content: center;
+    box-sizing: border-box;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
     align-content: center;
-    border-radius: 5%
-}
+    border-radius: 10%;
+  }
 
-#landing #finanDream #finanDreamAside #finanDreamIconDiv #h3Finan{
+  #landing #finanDream #finanDreamAside #finanDreamIconDiv #h3Finan {
     font-weight: 200;
     color: var(--Secundario);
-    font-size: 2.5vh
-}
+    font-size: 2.5vh;
+  }
 
-#landing #finanDream #finanDreamAside #yourDreamTitle{
+  #landing #finanDream #finanDreamAside #yourDreamTitle {
     text-align: left;
     color: var(--Primario-80);
     font-size: 3.5vh;
-}
+    margin-bottom: 0px;
+  }
 
-#landing #finanDream #finanDreamAside #yourDreamText{
-    text-align: left; 
+  #landing #finanDream #finanDreamAside #yourDreamText {
+    text-align: justify;
     font-size: 1.8vh;
-    color: var(--Primario-40)
-}
-
-#landing #finanDream #yourDreamImg{
+    color: var(--Texto);
+  }
+  #landing #DeamImgContent {
     width: 30vw;
-    min-width: 30vw;
-    max-width: 30vw;
     height: 40vh;
-    min-height: 40vh;
-    max-height: 40vh;
-    border-radius: 7%;
-}
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  #landing #finanDream #yourDreamImg {
+    width: 30vw;
+    height: auto;
+  }
 
-#landing #finanDream #finanDreamAside #yourDreamButton{
+  #landing #finanDream #finanDreamAside #yourDreamButton {
     background-color: var(--Primario);
     color: black;
     font-weight: bold;
     width: 180px;
     height: 58px;
-    
-}
+  }
 
-/* Quiénes somos? */
-#landing #whoAreWe{
+  /* Quiénes somos? */
+  #landing #whoAreWe {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 76vw ;
+    width: 76vw;
     height: 70vh;
-    margin-top: 8%
-
-}
-
-#landing #whoAreWe #whoWeAreImg{
+    margin-top: 8%;
+    border-radius: 20px;
+    background-color: var(--Fondo-2);
+  }
+  #landing #whoAreWe #whoWeAreImgContent {
     width: 30vw;
     height: 60vh;
-}
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  #landing #whoAreWe #whoWeAreImg {
+    width: 30vw;
+    height: auto;
+  }
 
-#landing #whoAreWe #whoAreWeAside{
-
+  #landing #whoAreWe #whoAreWeAside {
     display: flex;
     flex-direction: column;
     width: 40%;
     height: 70%;
-    
-}
+  }
 
-#landing #whoAreWe #whoAreWeAside h2{
+  #landing #whoAreWe #whoAreWeAside h2 {
     text-align: left;
     font-size: 4vh;
     color: var(--Primario-80);
     width: 100%;
     min-width: 100%;
-}
+    margin-bottom: 0px;
+  }
 
-#landing #whoAreWe #whoAreWeAside #whoWeAreText{
+  #landing #whoAreWe #whoAreWeAside #whoWeAreText {
     font-size: 1.8vh;
     width: 100%;
-    text-align: left;
-    color: var(--Primario-40);
+    text-align: justify;
+    color: var(--Texto);
+  }
 
-}
-
-#landing #whoAreWe #whoAreWeAside #whoWeAreButton{
+  #landing #whoAreWe #whoAreWeAside #whoWeAreButton {
     font-size: 2.5vh;
-    align-self:first baseline;
-    color: var(--Primario);
-    box-shadow: 15% 15% 15% var(--Primario)
-}
+    padding: 5%;
+    align-self: first baseline;
+    border-style: solid white;
+    color: var(--Primario-80);
+    background-color: var(--Fondo-1);
+    /* box-shadow: 15% 15% 15% var(--Primario); */
+  }
 
-/*Nuestro compromiso*/
-#landing #ourCompr{
+  /*Nuestro compromiso*/
+  #landing #ourCompr {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 86vw;
-    margin-top: 8%
-}
+    width: 76vw;
+    margin-top: 8%;
+    border-radius: 20px;
+    background-color: var(--Fondo-2);
+  }
 
-#landing #ourCompr #ourComprImg{
-    height: 60vh;
-    width: 30vw
-}
-
-#landing #ourCompr #textDivOurCompr{
+  #landing #ourCompr #imgContent {
+    height: 50vh;
+    width: 25vw;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 5%;
+  }
+  #landing #ourCompr #ourComprImg {
+    height: auto;
+    width: 25vw;
+  }
+  #landing #ourCompr #textDivOurCompr {
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#landing #ourCompr #textDivOurCompr #titleOurCompr{
+  }
+  #landing #ourCompr #textDivOurCompr #titleOurCompr {
     color: var(--Primario-80);
     text-align: left;
     font-size: 4vh;
-}
+    margin-bottom: 0px;
+  }
 
-#landing #ourCompr #textDivOurCompr #textOurCompr{
-    text-align: left;
+  #landing #ourCompr #textDivOurCompr #textOurCompr {
+    text-align: justify;
     font-size: 1.8vh;
-}
+  }
 
-/* Por que nosotros? */
-#landing #whyUsSection{
-    margin-top: 8%
-}
-
-#landing #whyUsSection #whyUs{
+  /* Por que nosotros? */
+  #landing #whyUsSection {
     margin-top: 8%;
+  }
+
+  #landing #whyUsSection #whyUs {
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     width: 80vw;
     justify-content: space-around;
-}
+  }
 
-#landing #whyUsSection #whyUsTitle{
-    color: var(--Primario-80)
-}
-
-
+  #landing #whyUsSection #whyUsTitle {
+    color: var(--Primario-80);
+    text-align: center;
+  }
 }
 
 /* MOBILE VERTICAL */
-@media (max-device-width: 480px) and (orientation: portrait){
-    #landing{
-    width: 90vw;
+@media (max-device-width: 480px) and (orientation: portrait) {
+  #landing {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    }
-
-    /* ¡Financia terrenos, transforma vidas! */
-    #landingTop{
-        width: 80%;
-        min-width: 80%;
-        max-width: 80%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #landingTop #mainImg{
-        width: 80vw;
-        min-width: 80vw;
-        max-width: 80vw;
-        height: 33vh;
-        min-height: 33vh;
-        max-height: 33vh;
-    }
-
-    #landingTop #topTitle{
-        font-size:4vh;
-        width: 120%;
-        position: relative;
-        right: 5%;
-        color: var(--Primario-90)
-    }
-
-    #landingTop #topButton{
-        background-color: var(--Primario);
-        color: black;
-        font-weight: bold;
-        width: 110%; 
-
-    }
-
-    #landingTop #topText{
-        color: var(--Primario-90);
-        font-size: 2vh;
-        width: 110%;
-
-    }
-
-    /* Inversión Inteligente */
-    #landing #smartInv{
-        margin-top: 5%;
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        height: 673px;
-        min-height: 673px;
-        max-height: 673px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-        gap: 2%
-    }
-    
-    #landing #smartInv #smartInvAside{
-        align-content: center;
-        width: 100%;
-    }
-    #landing #smartInv #smartInvAside #invIconDiv{
-        height: 6vh;
-        width: 45%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    #landing #smartInv #smartInvAside #invIconDiv #graphLineIcon{
-        background-color: var(--Secundario);
-        width: 27%;
-        height: 100%;
-        justify-content: center;
-        align-content: center;
-        border-radius: 5%
-    }
-    
-    #landing #smartInv #smartInvAside #invIconDiv #invest{
-        font-weight: 200;
-        color: var(--Secundario)
-    }
-    
-    #landing #smartInv #smartInvAside #titleInvestment{
-        text-align: left;
-        color: var(--Primario-90);
-        font-size: 3.5vh;
-    }
-    
-    #landing #smartInv #smartInvAside #investText{
-        text-align: left; 
-        font-size: 1.8vh;
-        color: var(--Primario-40);
-        width: 80%
-    }
-    
-    #landing #smartInv #smartInvImg{
-        width: 80%;
-        min-width: 80%;
-        max-width: 80%;
-        height: 30%;
-        min-height: 30%;
-        max-height: 30%;
-    }
-    
-    #landing #smartInv #smartInvAside #investButton{
-        background-color: var(--Primario);
-        color: black;
-        font-weight: bold;
-        position: absolute;
-        left:9%;
-        width: 217px;
-        height: 30px;
-
-    }
-
-    /*Tu sueño, nuestra mision*/
-
-    #landing #finanDream{
-        margin-top: 5%;
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        height: 673px;
-        min-height: 673px;
-        max-height: 673px;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        gap: 2%;
-        align-items: center;
-    }
-    
-    #landing #finanDream #finanDreamAside{
-        align-content: center;
-        width: 100%;
-    }
-    #landing #finanDream #finanDreamAside #finanDreamIconDiv{
-        height: 6vh;
-        width: 52%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    
-    }
-    
-    #landing #finanDream #finanDreamAside #finanDreamIconDiv #finanDreamIcon{
-        background-color: var(--Secundario);
-        width: 23%;
-        height: 100%;
-        justify-content: center;
-        align-content: center;
-        border-radius: 5%
-    }
-    
-    #landing #finanDream #finanDreamAside #finanDreamIconDiv #h3Finan{
-        font-weight: 200;
-        color: var(--Secundario);
-        font-size: 2.5vh
-    }
-    
-    #landing #finanDream #finanDreamAside #yourDreamTitle{
-        text-align: left;
-        color: var(--Primario-90);
-        font-size: 3.5vh;
-    }
-    
-    #landing #finanDream #finanDreamAside #yourDreamText{
-        text-align: left; 
-        font-size: 1.8vh;
-        color: var(--Primario-40);
-        width: 80%
-    }
-    
-    #landing #finanDream #yourDreamImg{
-        width: 310px;
-        min-width: 310px;
-        max-width: 310px;
-        height: 290px;
-        min-height: 290px;
-        max-height: 290px;
-        border-radius: 11%
-    }
-    
-    #landing #finanDream #finanDreamAside #yourDreamButton{
-        background-color: var(--Primario);
-        color: black;
-        font-weight: bold;
-        position: absolute;
-        left:9%;
-        width: 168px;
-        height: 30px
-        
-    }
-
-    /* Quiénes somos? */
-#landing #whoAreWe{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0%;
-    align-items: center;
-    width: 86vw;
-    height: 120vh;
-    margin-top: 20%
-}
-
-#landing #whoAreWe #whoWeAreImg{
-    width: 80vw;
-    border-radius: 8%;
-    height: 85vh;
-}
-
-#landing #whoAreWe #whoAreWeAside{
-
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    height: 80%;
-    justify-content: center;
-    gap: 0%
-    
-}
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Fondo-1);
+  }
+  /* ¡Financia terrenos, transforma vidas! */
+  #landingTop {
+    width: 80%;
+    min-width: 80%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  #landing #landingTop #mainImgContent {
+    width: 80vw;
+    height: 33vh;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  #landingTop #mainImg {
+    width: 100%;
+    height: 100%;
+  }
 
-#landing #whoAreWe #whoAreWeAside h2{
+  #landingTop #topTitle {
+    font-size: 4vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: var(--Primario-90);
+  }
+
+  #landingTop #topButton {
+    background-color: var(--Primario);
+    color: black;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  #landingTop #topText {
+    color: var(--Texto);
+    font-size: 2vh;
+    width: 100%;
+  }
+
+  /* Inversión Inteligente */
+  #landing #smartInv {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+
+  #landing #smartInv #smartInvAside {
+    align-content: center;
+    width: 80%;
+    margin-block: 5%;
+  }
+  #landing #smartInv #smartInvAside #invIconDiv {
+    height: 6vh;
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  #landing #smartInv #smartInvAside #invIconDiv #graphLineIcon {
+    background-color: var(--Secundario);
+    box-sizing: border-box;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    align-content: center;
+    border-radius: 10%;
+  }
+
+  #landing #smartInv #smartInvAside #invIconDiv #invest {
+    font-weight: 200;
+    color: var(--Secundario);
+  }
+
+  #landing #smartInv #smartInvAside #titleInvestment {
+    text-align: left;
+    color: var(--Primario-90);
+    font-size: 3.5vh;
+  }
+
+  #landing #smartInv #smartInvAside #investText {
+    text-align: justify;
+    font-size: 1.8vh;
+    color: var(--Texto);
+    width: 100%;
+  }
+
+  #landing #smartInv #smartInvImg {
+    width: 80%;
+    border-radius: 20px;
+  }
+  #landing #ourCompr #imgContent {
+    height: 50vh;
+    width: 25vw;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 5%;
+  }
+  #landing #ourCompr #ourComprImg {
+    height: auto;
+    width: 25vw;
+  }
+
+  /*Tu sueño, nuestra mision*/
+
+  #landing #finanDream {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+
+  #landing #finanDream #finanDreamAside {
+    align-content: center;
+    width: 80%;
+    margin-bottom: 10%;
+  }
+  #landing #finanDream #finanDreamAside #finanDreamIconDiv {
+    height: 6vh;
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 10px;
+  }
+
+  #landing #finanDream #finanDreamAside #finanDreamIconDiv #finanDreamIcon {
+    background-color: var(--Secundario);
+    box-sizing: border-box;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    align-content: center;
+    border-radius: 10%;
+  }
+
+  #landing #finanDream #finanDreamAside #finanDreamIconDiv #h3Finan {
+    font-weight: 200;
+    color: var(--Secundario);
+    font-size: 2.5vh;
+    width: 100%;
+  }
+
+  #landing #finanDream #finanDreamAside #yourDreamTitle {
+    text-align: left;
+    color: var(--Primario-90);
+    font-size: 3.5vh;
+    width: 100%;
+  }
+
+  #landing #finanDream #finanDreamAside #yourDreamText {
+    text-align: justify;
+    font-size: 1.8vh;
+    color: var(--Texto);
+    width: 100%;
+  }
+
+  #landing #finanDream #yourDreamImg {
+    width: 310px;
+    min-width: 310px;
+    max-width: 310px;
+    height: 290px;
+    min-height: 290px;
+    max-height: 290px;
+    border-radius: 11%;
+  }
+  #landing #DeamImgContent {
+    width: 80vw;
+    height: 40vh;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  #landing #finanDream #yourDreamImg {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Quiénes somos? */
+  #landing #whoAreWe {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+  #landing #whoAreWe #whoWeAreImgContent {
+    width: 80vw;
+    height: 40vh;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  #landing #whoAreWe #whoWeAreImg {
+    width: 80vw;
+    height: auto;
+  }
+
+  #landing #whoAreWe #whoAreWeAside {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+  }
+
+  #landing #whoAreWe #whoAreWeAside h2 {
     text-align: left;
     font-size: 4vh;
     color: var(--Primario-80);
     width: 100%;
     min-width: 100%;
-}
+  }
 
-#landing #whoAreWe #whoAreWeAside #whoWeAreText{
+  #landing #whoAreWe #whoAreWeAside #whoWeAreText {
     font-size: 1.8vh;
-    width: 90%;
-    text-align: left;
-    color: var(--Primario-40);
+    width: 100%;
+    text-align: justify;
+    color: var(--Texto);
+  }
 
-}
-
-#landing #whoAreWe #whoAreWeAside #whoWeAreButton{
-    font-size: 2.5vh;
-    align-self:first baseline;
-    color: var(--Primario);
-    box-shadow: 15% 15% 15% var(--Primario)
-}
-
-    /*Nuestro compromiso*/
-#landing #ourCompr{
-    margin-top: 15%;
+  /*Nuestro compromiso*/
+  #landing #ourCompr {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: space-around;
-    width: 96vw;
-}
-
-#landing #ourCompr #ourComprImg{
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+  #landing #ourCompr #imgContent {
+    width: 80vw;
     height: 40vh;
-    width: 70vw
-}
-
-#landing #ourCompr #textDivOurCompr{
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  #landing #ourCompr #ourComprImg {
+    width: 80vw;
+    height: auto;
+  }
+  #landing #ourCompr #textDivOurCompr {
     width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+  }
 
-#landing #ourCompr #textDivOurCompr #titleOurCompr{
+  #landing #ourCompr #textDivOurCompr #titleOurCompr {
     color: var(--Primario-80);
     text-align: left;
     font-size: 3.5vh;
-}
+  }
 
-#landing #ourCompr #textDivOurCompr #textOurCompr{
+  #landing #ourCompr #textDivOurCompr #textOurCompr {
     text-align: left;
     font-size: 1.8vh;
-}
+    color: (--Texto);
+  }
 
-/* Por que nosotros? */
-#landing #whyUsSection{
-    margin-top: 8%;
-    width: 100% 
-}
+  /* Por que nosotros? */
+  #landing #whyUsSection {
+    box-sizing: border-box;
+    margin-top: 10%;
+    width: 100%;
+    align-items: center;
+  }
 
-#landing #whyUsSection #whyUs{
-    margin-top: 8%;
+  #landing #whyUsSection #whyUs {
     display: flex;
     flex-direction: column;
-    width: 80vw;
-    justify-content: space-around
-}
+    width: 90%;
+    justify-content: space-around;
+  }
 
-#landing #whyUsSection #whyUsTitle{
+  #landing #whyUsSection #whyUsTitle {
     color: var(--Primario-80);
     text-align: center;
+  }
 }
 
+/*--------- Botones:------------ */
+.buttonOutline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  width: 60%;
+  padding: 2%;
+  color: var(--Primario-80);
+  background-color: var(--Fondo-2);
+  border: 3px solid var(--Primario);
+  gap: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.iconButton {
+  font-size: 100%;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.buttonOutline:hover {
+  background-color: var(--Primario);
+  border: none;
+}
+.buttonOutline:hover .iconButton {
+  transform: translateX(8px) scale(1.5);
+}
+.regularButton {
+  width: 60%;
+  padding: 2%;
+  font-weight: 800;
+  color: var(--Fondo-1);
+  background-color: var(--Primario);
+}
+
+.regularButton:hover {
+  color: var(--Primario-80);
+  background-color: var(--Primario-20);
 }
