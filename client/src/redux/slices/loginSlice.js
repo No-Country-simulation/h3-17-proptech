@@ -5,7 +5,7 @@ export const login = createAsyncThunk(
   "login/logInUser",
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await fetch("https://tuapi.com/login", {
+      const response = await fetch("https://www.financiaback.somee.com/api/Security/Login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
