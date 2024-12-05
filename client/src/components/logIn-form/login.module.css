@@ -1,0 +1,145 @@
+.formContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+  padding: 1em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: var(--Fondo-2);
+  margin-top: 10%;
+}
+.inputLabel {
+  width: 100%;
+  font-size: 90%;
+  text-align: left !important;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+.textInput {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 35px;
+  border-style: solid;
+  margin-bottom: 5px;
+  padding: 8px;
+  background-color: transparent;
+}
+.textInput.error {
+  border-color: var(---Error) !important;
+}
+.errorText {
+  color: var(---Error);
+  font-size: 0.7rem;
+  margin-top: 0px;
+  text-align: right;
+}
+.passSpan,
+.recuerdame {
+  display: flex;
+  flex-direction: row;
+}
+.divHidePass,
+.divShowPass {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: right;
+}
+.divHidePass p,
+.divShowPass p {
+  margin-block: 0;
+  padding: 0;
+  font-size: 85%;
+}
+.checkPassword p {
+  font-size: 85%;
+}
+.checkPassword {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.divisor hr {
+  flex: 1;
+  border: none;
+  border-top: 2px solid var(--Texto);
+  height: 0;
+  margin: 0;
+}
+
+.divisor p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--Texto);
+}
+.title {
+  margin-bottom: 10%;
+}
+.title h1 {
+  font-size: 130%;
+  margin-block: 1px;
+}
+.title p {
+  font-size: 90%;
+  margin-block: 1px;
+}
+.iconHide,
+.iconShow {
+  margin: 0;
+  padding: 0;
+}
+/* Botones */
+.sendButton {
+  width: 100%;
+  background-color: var(--Primario);
+  color: var(--Texto);
+  padding: 3%;
+  margin-block: 3%;
+}
+.sendButton:hover {
+  background-color: var(--Primario-20);
+}
+.sendButton:disabled {
+  background-color: var(--Primario-80);
+  color: var(--Primario-20);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.socialsButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-block: 5%;
+}
+.socialsButtons p {
+  font-size: 87%;
+  text-align: right;
+}
+.socialButton {
+  display: flex;
+  width: 100%;
+  padding: 0.7em;
+  justify-content: center;
+  gap: 0.5em;
+  background-color: white;
+  color: var(--Fondo-1);
+  font-size: 80%;
+}
+@media (max-width: 480px) {
+  .formContent {
+    box-sizing: border-box;
+    width: 80%;
+    margin-inline: 10%;
+  }
+}

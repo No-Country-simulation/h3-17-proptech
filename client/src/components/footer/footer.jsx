@@ -10,7 +10,7 @@ import {
 import { logoFinancial } from "../../assets";
 import styles from "./footer.module.css";
 
-export const Footer = () => {
+export function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.footerDesktop}>
@@ -65,4 +65,4 @@ export const Footer = () => {
       </div>
     </div>
   );
-};
+}

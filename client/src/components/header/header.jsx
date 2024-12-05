@@ -15,7 +15,7 @@ import { IoSearch, IoMenu } from "react-icons/io5";
 import styles from "./header.module.css";
 import { logoFinancial } from "../../assets";
 
-export const Header = () => {
+export function Header() {
   /*open/close mobile menu:*/
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -56,7 +56,7 @@ export const Header = () => {
                 Registrarse
               </Button>
             </Link>
-            <Link>
+            <Link to="/login">
               <Button
                 variant="contained"
                 size="small"
@@ -115,7 +115,9 @@ export const Header = () => {
             <Link to="/register-options">
               <MenuItem onClick={handleClose}>Registrarse</MenuItem>
             </Link>
-            <MenuItem onClick={handleClose}>Login</MenuItem>
+            <Link to="/login">
+              <MenuItem onClick={handleClose}>Login</MenuItem>
+            </Link>
           </Menu>
         </Toolbar>
 
@@ -133,4 +135,4 @@ export const Header = () => {
       </div>
     </div>
   );
-};
+}

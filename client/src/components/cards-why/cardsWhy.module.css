@@ -1,0 +1,30 @@
+/* ---------Cards WhyUs--------------- */
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-inline: 5%;
+    margin-bottom: 5%;
+  }
+  .cardIcon {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-content: center;
+    justify-content: center;
+    border-radius: 20%;
+    padding: 1%;
+  }
+  .card h3 {
+    color: var(--Primario);
+    margin-bottom: 5px;
+  }
+  .card p {
+    color: var(--Texto);
+    font-size: 1.8vh;
+    text-align: justify;
+    border-radius: 15%;
+    margin-top: 0;
+  }

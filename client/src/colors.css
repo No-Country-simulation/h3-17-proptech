@@ -8,22 +8,23 @@
 --Primario-80:#B8DEDA;
 --Primario-90:#D4EBE9;
 
---Secundario:#E9C46A;
---Secundario-20:#756235;
---Secundario-30: rgba(155, 131, 71, 0.3);
---Secundario-80: rgba(248, 235, 205, 0.8);
---Secundario-90:#FBF3E1;
+  --Secundario: #e9c46a;
+  --Secundario-20: #756235;
+  --Secundario-30: rgba(155, 131, 71, 0.3);
+  --Secundario-80: rgba(248, 235, 205, 0.8);
+  --Secundario-90: #fbf3e1;
 
---Terciario:#F77F00;
---Terciario-20:#7C4000;
---Terciario-30:#A55500;
---Terciario-80:#FCD4AA;
---Terciario-90:#FDE5CC;
+  --Terciario: #f77f00;
+  --Terciario-20: #7c4000;
+  --Terciario-30: #a55500;
+  --Terciario-80: #fcd4aa;
+  --Terciario-90: #fde5cc;
 
---Texto:#EAEAEA;
+  --Texto: #eaeaea;
 
---Fondo-1:#110F14;
---Fondo-2:#211E27;
---Fondo-3:#46444B;
+  --Fondo-1: #110f14;
+  --Fondo-2: #211e27;
+  --Fondo-3: #46444b;
 
+  ---Error: #ff3333;
 }
