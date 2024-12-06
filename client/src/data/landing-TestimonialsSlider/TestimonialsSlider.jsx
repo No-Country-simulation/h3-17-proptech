@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { logoFinancial } from "../../assets";
+import { logoFinancial, profileImg } from "../../assets";
 import './testimonials.css';
 
 export default function TestimonialsSlider() {
@@ -10,19 +10,19 @@ export default function TestimonialsSlider() {
       text: "Invertir nunca fue tan sencillo. Financial.al me permitió diversificar mi portafolio con confianza y resultados claros.",
       author: "Nombre",
       role: "Inversor",
-      image: "/path-to-author1-image.jpg",
+      image: profileImg,
     },
     {
       text: "Gracias a esta plataforma, hoy estoy construyendo mi hogar.",
       author: "Nombre",
       role: "Inversor",
-      image: "/path-to-author2-image.jpg",
+      image: profileImg,
     },
     {
       text: "Ya soy dueño de mi terreno y estoy feliz. El proceso fue claro y accesible.",
       author: "Nombre",
       role: "Inversor",
-      image: "/path-to-author3-image.jpg",
+      image: profileImg,
     },
   ];
 
