@@ -1,5 +1,5 @@
 import { profileImg } from "../../assets/index";
-import { styles } from "./headerLogin.module.css";
+import styles  from "./headerLogin.module.css";
 
 export function HeaderLogin() {
   return (
