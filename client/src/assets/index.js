@@ -15,6 +15,7 @@ import iconSoc from "./receipt-icon.png";
 import howImg1 from "./financiar1.jpg";
 import howImg2 from "./financiar2.jpg";
 import howImg3 from "./financiar3.jpg";
+import profileImg from "./profile.png";
 
 export {
   buyerImg,
@@ -34,4 +35,5 @@ export {
   howImg1,
   howImg2,
   howImg3,
+  profileImg,
 };
