@@ -40,11 +40,11 @@ evaluar el rendimiento y riesgo de sus inversiones. El diseño se centrará en u
 
 ## Colaboradores 👥
 
-| Nombre             | Rol             | Linkedin                                                        | Portafolio                                    |
-| ------------------ | --------------- | --------------------------------------------------------------- | --------------------------------------------- |
-| Angela Barrenechea | Front End       | [Linkedin](https://www.linkedin.com/in/angela-barrenechea-589127265/) [GitHub](https://github.com/angelacba86)      |
-| Matias Quirico     | Front End       | [Linkedin](https://www.linkedin.com/in/matias-quirico/)         | [GitHub](https://github.com/MQuirico)         |
-| Rodrigo Kohner     | Backend         | [Linkedin](https://www.linkedin.com/in/rodrigo-kohnen/)         | [GitHub](https://github.com/rodrikohnen)      |
-| Alejandra Mora     | UX/UI           | [Linkedin](https://www.linkedin.com/in/aleja-mora-vitoviz-uxui) | [GitHub](https://github.com/AlejandraVitoviz) |
-| Malena De Arriba   | UX/UI           | [Linkedin](https://www.linkedin.com/in/malena-de-arriba)        | [GitHub](https://github.com/maleducat)        |
-| Roger Parra        | Project Manager | [Linkedin](https://www.linkedin.com/in/roger-parra/)            | [GitHub](https://github.com/rogerparra)       |
+| Nombre             | Rol             | Linkedin                                                              | Portafolio                                    |
+| ------------------ | --------------- | ---------------------------------------------------------------       | --------------------------------------------- |
+| Angela Barrenechea | Front End       | [Linkedin](https://www.linkedin.com/in/angela-barrenechea-589127265/) |[GitHub](https://github.com/angelacba86)       |
+| Matias Quirico     | Front End       | [Linkedin](https://www.linkedin.com/in/matias-quirico/)               | [GitHub](https://github.com/MQuirico)         |
+| Rodrigo Kohner     | Backend         | [Linkedin](https://www.linkedin.com/in/rodrigo-kohnen/)               | [GitHub](https://github.com/rodrikohnen)      |
+| Alejandra Mora     | UX/UI           | [Linkedin](https://www.linkedin.com/in/aleja-mora-vitoviz-uxui)       | [GitHub](https://github.com/AlejandraVitoviz) |
+| Malena De Arriba   | UX/UI           | [Linkedin](https://www.linkedin.com/in/malena-de-arriba)              | [GitHub](https://github.com/maleducat)        |
+| Roger Parra        | Project Manager | [Linkedin](https://www.linkedin.com/in/roger-parra/)                  | [GitHub](https://github.com/rogerparra)       |
