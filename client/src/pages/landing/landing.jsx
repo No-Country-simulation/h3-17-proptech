@@ -4,6 +4,8 @@ import { TbSquareRoundedArrowRight } from "react-icons/tb";
 import { pic1, pic2, pic3, pic4, pic5 } from "../../assets/index";
 import { CardWhyComponent } from "../../components/index";
 import { whyUs } from "../../data/whyUs";
+import HowItWorks from "../../data/landing-HowItWorks/HowItWorks";
+import TestimonialsSlider from "../../data/landing-TestimonialsSlider/TestimonialsSlider";
 import "../../colors.css";
 import "./landing.css";
 
@@ -138,6 +140,8 @@ export function LandingPage() {
       {whoAreWe}
       {nuestroCompromiso}
       {whyUsSection}
+      <HowItWorks />
+      <TestimonialsSlider />
     </div>
   );
 }
