@@ -1,0 +1,162 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  justify-content:flex-end;
+}
+
+.filter-select {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+.search-button {
+  background-color: var(--Terciario);
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.personalization {
+  background-color: var(--color-card);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personalization-title {
+  color: var(--Secundario-20);
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.personalization-text {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 50%;
+}
+
+.simulate-button {
+  background-color: transparent;
+  color: var(--Secundario);
+  border: 1px solid var(--Secundario);
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: last baseline;
+}
+
+.section-title {
+  margin: 2rem 0;
+  color: var(--Primario-80)
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: var(--color-card);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.card-amount {
+  color: var(--Primario-30);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-label {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.detail-item {
+  text-align: left;
+}
+
+.detail-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--Secundario-80)
+}
+
+.detail-label {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.card-button {
+  width: 40%;
+  background-color: var(--Primario);
+  color: black;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  left: 60%
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-button {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 40px;
+}
+
+.pagination-button.active {
+  background-color: var(--Secundario);
+  color: var(--color-card);
+  border-color: var(--color-accent);
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

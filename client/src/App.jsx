@@ -4,6 +4,7 @@ import {
   LandingPage,
   RegisterOptions,
   RegisterPage,
+  AvailablePlans,
   LoginPage,
 } from "./pages/index";
 import "./App.css";
@@ -28,7 +29,9 @@ function App() {
               path="/register-options"
               element={<RegisterOptions />}
             />
+
             <Route exact path="/register" element={<RegisterPage />} />
+            <Route exact path="/plans" element={<AvailablePlans />} />
             <Route exact path="/login" element={<LoginPage />} />
           </Routes>
         </main>
