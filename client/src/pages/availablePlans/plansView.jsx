@@ -2,7 +2,7 @@ import { useState } from 'react'
 import FinancialCard from "../../data/PlansView - Financial Card/financial-card"
 import Pagination from '../../data/PlansView - Financial Card/pagination'
 import "./plansView.css"
-export default function AvailablePlans() {
+export function AvailablePlans() {
   const [currentPage, setCurrentPage] = useState(1)
   
 

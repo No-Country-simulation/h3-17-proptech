@@ -10,7 +10,7 @@
   gap: 1rem;
   margin-bottom: 2rem;
   position: relative;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 .filter-select {
@@ -66,7 +66,7 @@
 
 .section-title {
   margin: 2rem 0;
-  color: var(--Primario-80)
+  color: var(--Primario-80);
 }
 
 .cards-grid {
@@ -74,10 +74,11 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
+  width: 95%;
 }
 
 .card {
-  background-color: var(--color-card);
+  background-color: var(--Fondo-1);
   padding: 1.5rem;
   border-radius: 8px;
 }
@@ -107,7 +108,7 @@
 .detail-value {
   font-size: 1.25rem;
   font-weight: bold;
-  color: var(--Secundario-80)
+  color: var(--Secundario-80);
 }
 
 .detail-label {
@@ -125,7 +126,7 @@
   font-weight: bold;
   cursor: pointer;
   position: relative;
-  left: 60%
+  left: 60%;
 }
 
 .pagination-container {
@@ -159,4 +160,3 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
-
