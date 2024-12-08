@@ -6,7 +6,6 @@ import { LoginForm as LoginFormComponent } from "./logIn-form/logIn";
 import { RegisterForm as RegisterFormComponent } from "./register-form/register";
 import { CardsWhy as CardWhyComponent } from "./cards-why/cardsWhy";
 import { SidebarBuyer } from "./sidebar-buyer/sidebarBuyer";
-import { FinancingBuyer as FinancingBuyerComponent } from "./financing-buyer/financingBuyer";
 
 export {
   FooterComponent,
@@ -17,5 +16,4 @@ export {
   RegisterFormComponent,
   CardWhyComponent,
   SidebarBuyer,
-  FinancingBuyerComponent,
 };

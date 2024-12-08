@@ -7,7 +7,7 @@ import {
   DashboardLayout,
   AvailablePlans,
 } from "../pages";
-import { FinancingBuyerComponent } from "../components";
+
 
 export function RouterViews() {
   return (
