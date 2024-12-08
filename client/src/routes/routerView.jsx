@@ -5,6 +5,7 @@ import {
   RegisterPage,
   LoginPage,
   DashboardLayout,
+  AvailablePlans,
 } from "../pages";
 import { FinancingBuyerComponent } from "../components";
 
@@ -25,7 +26,7 @@ export function RouterViews() {
         }
       >
         {/* Subruta predeterminada */}
-        <Route index element={<FinancingBuyerComponent />} />
+        <Route index element={<AvailablePlans />} />
       </Route>
     </Routes>
   );
