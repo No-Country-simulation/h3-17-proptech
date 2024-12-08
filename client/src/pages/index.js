@@ -3,6 +3,7 @@ import { RegisterPage } from "./register/registerPage";
 import { LoginPage } from "./login/loginPage";
 import { RegisterOptions } from "./register-options/registerOption";
 import { DashboardLayout } from "./dashboard-layout/dashboardLayout";
+import { AvailablePlans } from "./availablePlans/plansView";
 
 export {
   LandingPage,
@@ -10,4 +11,5 @@ export {
   LoginPage,
   RegisterOptions,
   DashboardLayout,
+  AvailablePlans,
 };
