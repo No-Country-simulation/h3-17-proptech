@@ -1,11 +1,7 @@
-import { Routes, Route } from "react-router-dom";
 import { HeaderComponent, FooterComponent } from "./components/index";
-import {
-  LandingPage,
-  RegisterOptions,
-  RegisterPage,
-  LoginPage,
-} from "./pages/index";
+import { RouterViews } from "./routes/routerView";
+import { useLocation } from "react-router-dom";
+
 import "./App.css";
 import "@fontsource/poppins/200.css";
 import "@fontsource/poppins/400.css";
@@ -14,6 +10,9 @@ import "@fontsource/poppins/800.css";
 import "./colors.css";
 
 function App() {
+  const location = useLocation();
+  const generalRoutes = ["/", "/login", "/register", "/register-options"];
+
   return (
     <>
       <div className="appContainer">
@@ -21,23 +20,15 @@ function App() {
           <HeaderComponent />
         </header>
         <main>
-          <Routes>
-            <Route exact path="/" element={<LandingPage />} />
-            <Route
-              exact
-              path="/register-options"
-              element={<RegisterOptions />}
-            />
-            <Route exact path="/register" element={<RegisterPage />} />
-            <Route exact path="/login" element={<LoginPage />} />
-          </Routes>
+          <RouterViews />
         </main>
-        <footer>
-          <FooterComponent />
-        </footer>
+        {generalRoutes.includes(location.pathname) && (
+          <footer>
+            <FooterComponent />
+          </footer>
+        )}
       </div>
     </>
   );
 }
-
 export default App;
