@@ -40,11 +40,13 @@ export function Header() {
             }
           ></InputBase>
           <div className={styles.logo}>
+            <Link to="/">
             <img
-              style={{ width: "100%", height: "100%" }}
+              style={{ width: "100%", height: "100%", cursor: "pointer" }}
               src={logoFinancial}
               alt="logo Financial"
             />
+            </Link>
           </div>
           <div className={styles.buttonsContainer}>
             <Link to="/register-options">
