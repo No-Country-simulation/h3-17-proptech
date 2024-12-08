@@ -36,7 +36,7 @@ export function RegisterForm({ role }) {
       ...data,
       birthDate: formatBirthDate(data.birthDate),
       role,
-      isSocialLogin: false,
+      isSocialLogin: true,
       loginTypeId: 0,
     };
 
@@ -50,7 +50,7 @@ export function RegisterForm({ role }) {
 
   useEffect(() => {
     if (user) {
-      alert("¡Registro exitoso!");
+      alert("¡Registro exitoso! Inicia sesión para comenzar a operar");
       dispatch(clearRegisterState());
     }
   }, [user, dispatch]);
