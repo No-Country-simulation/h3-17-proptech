@@ -1,0 +1,92 @@
+.content {
+  background-color: #1a1d24;
+  color: #ffffff;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+.titles {
+  margin-bottom: 1em;
+}
+.titles h1,
+p {
+  margin-block: 5px;
+}
+.cardsContent {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.card {
+  background-color: var(--Fondo-1);
+  border-radius: 20px;
+  text-align: center;
+  padding: 3em 2em;
+}
+.card h3 {
+  font-size: 4vh;
+  color: var(--Secundario);
+  margin: 0;
+}
+.card p {
+  font-size: 1.8vh;
+  color: var(--Texto);
+  margin-top: 0;
+}
+.textcontent {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  color: var(--Secundario);
+  width: 90%;
+}
+.textcontent h4 {
+  font-size: 3vh !important;
+  color: var(--Secundario) !important;
+}
+.textcontent p {
+  font-size: 1.8vh;
+  text-align: justify;
+  color: var(--Texto);
+}
+.buttonscontent {
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  margin-block: 2em;
+  justify-content: end;
+  gap: 2em;
+}
+.buttonback {
+  border: 2px solid var(--Secundario);
+  background-color: transparent;
+  color: var(--Secundario);
+  padding: 0.5em;
+}
+.buttonback:hover {
+  border: 2px solid var(--Terciario);
+  color: var(--Terciario);
+}
+.buttonnext {
+  border: 2px solid var(--Primario-80);
+  background-color: transparent;
+  color: var(--Primario-80);
+  padding: 0.5em;
+}
+.buttonnext:hover {
+  border: 2px solid var(--Primario);
+  color: var(--Primario);
+}
+.buttonnext {
+    border: 2px solid var(--Primario-80);
+    background-color: transparent;
+    color: var(--Primario-80);
+    padding: 0.5em;
+  }
+  .buttonnext:hover {
+    border: 2px solid var(--Primario);
+    color: var(--Primario);
+  }

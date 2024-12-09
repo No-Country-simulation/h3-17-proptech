@@ -6,6 +6,11 @@ import { LoginForm as LoginFormComponent } from "./logIn-form/logIn";
 import { RegisterForm as RegisterFormComponent } from "./register-form/register";
 import { CardsWhy as CardWhyComponent } from "./cards-why/cardsWhy";
 import { SidebarBuyer } from "./sidebar-buyer/sidebarBuyer";
+import { PlanCalculator } from "./plan-calculator/planCalculator";
+import { PlanSelected } from "./plan-selected/planSelected";
+import { PlanDocument } from "./plan-documents/planDocument";
+import { PlanTerms } from "./plan-terms/planTerms";
+import { PlanSend } from "./plan-sended/planSend";
 
 export {
   FooterComponent,
@@ -16,4 +21,9 @@ export {
   RegisterFormComponent,
   CardWhyComponent,
   SidebarBuyer,
+  PlanCalculator,
+  PlanSelected,
+  PlanDocument,
+  PlanTerms,
+  PlanSend,
 };
