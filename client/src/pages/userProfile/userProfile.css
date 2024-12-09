@@ -1,0 +1,182 @@
+.dashboard {
+  min-height: 100vh;
+  background: #1a1a1a;
+  color: white;
+  position: relative;
+  padding: 20px;
+}
+
+.gradient-bg {
+  position: absolute;
+  width: 99%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(90deg, #ff8a00, #40e0d0);
+  opacity: 0.5;
+  z-index: 1;
+  border-top-right-radius: 25px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-section {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #40e0d0;
+}
+
+.edit-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #40e0d0;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 20px 0 5px;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.validate-button {
+  background: var(--Secundario);
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  left: 80%
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.personal-info, .credit-score {
+  background: #222;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #888;
+}
+
+.info-item svg {
+  color: #40e0d0;
+}
+
+.gauge-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.gauge {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  border-radius: 100px 100px 0 0;
+  background: #333;
+}
+
+.gauge-arc {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  border-radius: 100px 100px 0 0;
+  background: linear-gradient(90deg, #ff4500, #ffa500);
+  clip-path: polygon(0 100%, 30% 100%, 30% 0, 0 0);
+}
+
+.score {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.credit-description {
+  text-align: center;
+  color: #888;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.risk-status {
+  text-align: center;
+  color: #888;
+}
+
+.risk-level {
+  color: #ffd700;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
