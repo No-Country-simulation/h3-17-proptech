@@ -3,6 +3,7 @@ import {
   PlanCalculator,
   PlanDocument,
   PlanSelected,
+  PlanData,
   PlanTerms,
   PlanSend,
 } from "../../components";
@@ -10,7 +11,7 @@ import "./credit-simulator.css";
 
 export function CreditSimulator() {
   const [currentStep, setCurrentStep] = useState(1); // Controla el paso actual
-  const totalSteps = 5; // Total de pasos del progreso
+  const totalSteps = 6; // Total de pasos del progreso
 
   const handleNextStep = () => {
     if (currentStep < totalSteps) {
@@ -56,12 +57,18 @@ export function CreditSimulator() {
           />
         )}
         {currentStep === 4 && (
-          <PlanTerms
+          <PlanData
             handleNextStep={handleNextStep}
             handlePreviousStep={handlePreviousStep}
           />
         )}
         {currentStep === 5 && (
+          <PlanTerms
+            handleNextStep={handleNextStep}
+            handlePreviousStep={handlePreviousStep}
+          />
+        )}
+        {currentStep === 6 && (
           <PlanSend handlePreviousStep={handlePreviousStep} />
         )}
       </div>
