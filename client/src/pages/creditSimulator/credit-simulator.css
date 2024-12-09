@@ -13,9 +13,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
-  width: 35vw;
   position: relative;
-
 }
 
 .step {
@@ -40,7 +38,8 @@
   width: 50px;
   height: 2px;
   background-color: var(--Secundario);
-  margin: 0 10px;
+  margin-inline: 0;
+  margin-block: 10px;
 }
 
 h1 {
@@ -96,7 +95,7 @@ h1 {
   cursor: pointer;
 }
 
-.detail{
+.detail {
   font-size: 0.8rem;
 }
 
@@ -166,7 +165,7 @@ h1 {
   display: block;
 }
 
-.calculation-details .tea{
+.calculation-details .tea {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -203,9 +202,8 @@ h1 {
   .simulator-content {
     grid-template-columns: 1fr;
   }
-  
+
   .terms-info {
     grid-template-columns: 1fr;
   }
 }
-
