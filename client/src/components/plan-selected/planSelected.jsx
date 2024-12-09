@@ -35,7 +35,7 @@ export function PlanSelected({ handleNextStep, handlePreviousStep }) {
         </div>
         <div className={styles.card}>
           <p>Cuotas</p>
-          <h3>$ {cuotes}</h3>
+          <h3> {cuotes}</h3>
         </div>
         <div className={styles.card}>
           <p>Monto de cuota</p>
@@ -43,7 +43,7 @@ export function PlanSelected({ handleNextStep, handlePreviousStep }) {
         </div>
         <div className={styles.card}>
           <p>Tasa de interes mensual</p>
-          <h3>{calculatedData.monthlyRate}%</h3>
+          <h3>{calculatedData.monthlyRate}</h3>
         </div>
         <div className={styles.card}>
           <p>Costo total financiado</p>
