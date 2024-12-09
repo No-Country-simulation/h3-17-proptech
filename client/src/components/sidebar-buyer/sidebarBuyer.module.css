@@ -48,3 +48,8 @@
   background-color: var(--Primario-20);
   border: none;
 }
+.sidebarButtonActive {
+  background-color: var(--Primario-20);
+  color: var(--Texto);
+  font-weight: bold; 
+}
