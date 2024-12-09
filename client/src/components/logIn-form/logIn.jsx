@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { BiShowAlt, BiHide } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple, FaFacebook } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/slices/loginSlice";
 
@@ -12,7 +12,7 @@ import styles from "./login.module.css";
 export function LoginForm() {
   const [showPassword, setShowPassword] = useState(true);
   const dispatch = useDispatch();
-  const { isLoading, error } = useSelector((state) => state.login);
+  const { isLoading, error, user } = useSelector((state) => state.login);
   const handleShowHide = () => {
     setShowPassword(!showPassword);
   };
@@ -23,7 +23,9 @@ export function LoginForm() {
     reset,
   } = useForm({ mode: "onChange" });
 
-  console.log(errors);
+  const navigate = useNavigate()
+
+  console.log("TOKEN DE USUARIO --->", user)
 
   const loginSubmit = (data) => {
     console.log("Formulario enviado");
@@ -32,6 +34,12 @@ export function LoginForm() {
     dispatch(login(loginData));
     reset();
   };
+
+useEffect(() => {
+    if(user){
+      navigate("/user/buyer")
+    }
+}, [user])
 
   return (
     <>
