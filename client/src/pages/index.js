@@ -4,6 +4,7 @@ import { LoginPage } from "./login/loginPage";
 import { RegisterOptions } from "./register-options/registerOption";
 import { DashboardLayout } from "./dashboard-layout/dashboardLayout";
 import { AvailablePlans } from "./availablePlans/plansView";
+import { CreditSimulator } from "./creditSimulator/credit-simulator";
 
 export {
   LandingPage,
@@ -12,4 +13,5 @@ export {
   RegisterOptions,
   DashboardLayout,
   AvailablePlans,
+  CreditSimulator,
 };
