@@ -16,6 +16,7 @@ import howImg1 from "./financiar1.jpg";
 import howImg2 from "./financiar2.jpg";
 import howImg3 from "./financiar3.jpg";
 import profileImg from "./profile.png";
+import pdficon from "./pdficon.png";
 
 export {
   buyerImg,
@@ -36,4 +37,5 @@ export {
   howImg2,
   howImg3,
   profileImg,
+  pdficon,
 };
