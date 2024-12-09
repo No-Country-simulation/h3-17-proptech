@@ -32,7 +32,7 @@ namespace FinanciaBack.DAL
             return await command.FirstOrDefaultAsync();
         }
 
-        public async Task<Buyer?> GetByUserEmailAsync(string email, bool fullCustomer)
+        public async Task<Buyer?> GetByUserEmailAsync(string email)
         {
             return await _appContext
             .Buyers!

@@ -7,6 +7,7 @@ namespace FinanciaBack.DAL
         IUserRepository Users { get; }
         IContactRepository Contacts { get; }        
         IBuyerRepository Buyers { get; }
+        IBuyerRequestRepository BuyersRequest { get; }
         IInvestorRepository Investors { get; }
 
         #region Methods
@@ -24,6 +25,7 @@ namespace FinanciaBack.DAL
         public IUserRepository Users { get; private set; }
         public IContactRepository Contacts { get; private set; }
         public IBuyerRepository Buyers { get; private set; }
+        public IBuyerRequestRepository BuyersRequest { get; private set; }
         public IInvestorRepository Investors { get; private set; }
 
         public UnitOfWork(WebAppContext webAppContext)
@@ -33,6 +35,7 @@ namespace FinanciaBack.DAL
             Contacts = new ContactRepository(webAppContext);
             Buyers = new BuyerRepository(webAppContext);
             Investors = new InvestorRepository(webAppContext);
+            BuyersRequest = new BuyerRequestRepository(webAppContext);
         }
 
         #region Methods        

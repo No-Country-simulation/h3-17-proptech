@@ -44,6 +44,9 @@ namespace FinanciaBack.API
                 });
             });
 
+            //Configuracion Automapper
+            builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+
 
             ConfigureSwagger();
             ConfigureDependencyInjection();
@@ -133,6 +136,7 @@ namespace FinanciaBack.API
                 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
                 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
                 builder.Services.AddScoped<IJwtSecurityManager, JwtSecurityManager>();
+                builder.Services.AddScoped<IBuyerRequestService, BuyerRequestService>();
 
             }
 

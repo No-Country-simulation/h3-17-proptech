@@ -19,8 +19,4 @@
     <ProjectReference Include="..\FinanciaBack.Models\FinanciaBack.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

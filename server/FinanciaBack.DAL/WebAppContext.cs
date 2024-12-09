@@ -18,6 +18,8 @@ namespace FinanciaBack.DAL
         public DbSet<ContactEF>? Contacts { get; set; }
         public DbSet<Buyer>? Buyers { get; set; }
         public DbSet<Investor>? Investors { get; set; }
+        public DbSet<BuyerRequest>? BuyerRequests { get; set; }
+
 
         #endregion
         #region Configuration        
