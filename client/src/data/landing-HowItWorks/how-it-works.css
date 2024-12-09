@@ -2,6 +2,7 @@
   background: transparent;
   padding: 60px 20px;
   color: white;
+  width: 90%;
 }
 
 .process-header {
@@ -37,6 +38,8 @@
   padding: 0px;
   background-color: var(--Fondo-2);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .step-number {

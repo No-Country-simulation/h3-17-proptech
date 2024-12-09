@@ -9,7 +9,7 @@
   width: 80vw;
 }
 
-.progress-steps {
+.simulator-container .progress-steps {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
   position: relative;
 }
 
-.step {
+.simulator-container .progress-steps .step {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -29,7 +29,7 @@
   font-size: 14px;
 }
 
-.step.active {
+.simulator-container .progress-steps .step.active {
   background-color: var(--Terciario-30);
   border: 2px solid var(--Terciario-30);
   color: #1a1d24;

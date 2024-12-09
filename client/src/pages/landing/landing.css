@@ -32,6 +32,7 @@
 
   #landing #landingTop #topTitle {
     font-size: 5.5vh;
+    align-self: center;
   }
 
   #landing #landingTop #topButton {
