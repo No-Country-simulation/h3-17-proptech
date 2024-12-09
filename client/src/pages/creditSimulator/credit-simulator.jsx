@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './credit-simulator.css'
 
-export default function CreditSimulator() {
+export function CreditSimulator() {
   const [loanAmount, setLoanAmount] = useState(null)
   const [advanceAmount, setAdvanceAmount] = useState(null)
   const [monthlyPayment, setMonthlyPayment] = useState(null)
