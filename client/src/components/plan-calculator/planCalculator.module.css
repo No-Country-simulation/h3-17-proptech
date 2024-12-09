@@ -1,0 +1,214 @@
+.simulatorContainer {
+  color: #ffffff;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}
+h1 {
+  color: var(--Primario-80);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  align-self: first baseline;
+}
+
+.subtitle {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  align-self: first baseline;
+}
+
+.simulatorContent {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 1.5rem;
+  width: 45%;
+}
+.cuotesData {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  color: var(--Texto);
+  font-size: 0.9rem;
+}
+
+.inputGroup input,
+.inputGroup select {
+  background-color: transparent;
+  border: 1px solid var(--Primario);
+  border-radius: 4px;
+  padding: 0.8rem;
+  color: var(--Texto);
+  font-size: 1rem;
+}
+.inputGroup select:hover,
+.inputGroup select option {
+  background-color: var(--Fondo-2);
+}
+.inputGroup select:checked {
+  background-color: var(--Primario);
+}
+.detail-link {
+  color: #5ee6d0;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.detail {
+  font-size: 0.8rem;
+}
+
+.installmentsControl {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.installmentsControl button {
+  background-color: transparent;
+  border: 1px solid #5ee6d0;
+  color: #5ee6d0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.calculationDetails {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.calculationDetails h2 {
+  color: var(--Primario-80);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.financialInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.totalAmount {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.highlightAmount {
+  color: var(--Primario-30);
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.termsInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.highlightText {
+  color: var(--Primario-30);
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.calculationDetails .tea {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+.rate,
+.tct,
+.monthlyRate {
+  justify-content: center;
+  text-align: center;
+}
+.rate label,
+.tct label,
+.monthlyRate label {
+  font-size: small;
+}
+.rate span,
+.tct span,
+.monthlyRate span {
+  font-size: x-large;
+}
+
+.notes {
+  font-size: 0.8rem;
+  color: #999;
+  line-height: 1.4;
+}
+
+.notes p {
+  margin-bottom: 0.5rem;
+}
+.containerButton {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+.continueButton {
+  background-color: #f4b860;
+  color: #1a1d24;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40%;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.continueButton:hover {
+  background-color: var(--Secundario);
+}
+
+@media (max-width: 768px) {
+  .simulatorContent {
+    grid-template-columns: 1fr;
+  }
+
+  .termsInfo {
+    grid-template-columns: 1fr;
+  }
+}

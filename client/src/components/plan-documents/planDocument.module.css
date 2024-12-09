@@ -1,0 +1,54 @@
+.content {
+  background-color: #1a1d24;
+  color: #ffffff;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+.introductiontext {
+  width: 90%;
+  text-align: justify;
+  color: var(--Secundario);
+  font-size: 1.8vh;
+}
+.datacontainer {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+}
+.datatext {
+  width: 45%;
+}
+.datatext ol {
+  font-weight: bold;
+  color: var(--Texto);
+}
+.datatext li span {
+  font-size: 1.8vh;
+}
+.dataupload {
+  width: 45%;
+  background-color: var(--Fondo-1);
+  border-radius: 20px;
+}
+.buttonnext {
+  border: 2px solid var(--Primario-80);
+  background-color: transparent;
+  color: var(--Primario-80);
+  padding: 0.5em;
+}
+.buttonnext:hover {
+  border: 2px solid var(--Primario);
+  color: var(--Primario);
+}
+.buttoncontainer {
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  margin-block: 2em;
+  justify-content: end;
+  gap: 2em;
+}
