@@ -56,10 +56,10 @@ export function SidebarBuyer() {
           <GrDatabase />
           Solicitudes
         </button>
-        <button className={styles.sidebarButtons}>
+        <NavLink to="/" className={styles.sidebarButtons}>
           <RiLogoutBoxRLine />
           Cerrar Sesión
-        </button>
+        </NavLink>
       </div>
     </div>
   );
