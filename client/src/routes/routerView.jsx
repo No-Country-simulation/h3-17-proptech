@@ -6,8 +6,8 @@ import {
   LoginPage,
   DashboardLayout,
   AvailablePlans,
+  CreditSimulator,
 } from "../pages";
-
 
 export function RouterViews() {
   return (
@@ -27,6 +27,7 @@ export function RouterViews() {
       >
         {/* Subruta predeterminada */}
         <Route index element={<AvailablePlans />} />
+        <Route path="credit-simulator" element={<CreditSimulator />} />
       </Route>
     </Routes>
   );
