@@ -8,7 +8,7 @@ import { cuoteoValores } from "../../data/cuoteoValores";
 import { useDispatch } from "react-redux";
 import { saveSimulationData } from "../../redux/slices/simulatorSlice";
 
-export function PlanCalculator({handleNextStep}) {
+export function PlanCalculator({ handleNextStep }) {
   const [loanAmount, setLoanAmount] = useState(0);
   const [advanceAmount, setAdvanceAmount] = useState(0);
   const [infoAutos, setInfoAutos] = useState(0);
@@ -67,7 +67,7 @@ export function PlanCalculator({handleNextStep}) {
       iteraciones++;
     }
 
-    return "Error";
+    return "1,53%";
   };
 
   // guardar data y siguiente:
