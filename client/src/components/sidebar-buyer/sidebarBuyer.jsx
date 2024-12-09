@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./sidebarBuyer.module.css";
 import { logoFinancial } from "../../assets";
 import { FaChartBar } from "react-icons/fa";
@@ -13,14 +14,31 @@ export function SidebarBuyer() {
         <img src={logoFinancial} />
       </div>
       <div className={styles.buttonsContainer}>
-        <button className={styles.sidebarButtons}>
+        <NavLink
+          to="/user/buyer"
+          end
+          className={({ isActive }) =>
+            `${styles.sidebarButtons} ${
+              isActive ? styles.sidebarButtonActive : ""
+            }`
+          }
+        >
           <FaChartBar />
           Financiamiento
-        </button>
-        <button className={styles.sidebarButtons}>
+        </NavLink>
+
+        <NavLink
+          to="/user/buyer/credit-simulator"
+          className={({ isActive }) =>
+            `${styles.sidebarButtons} ${
+              isActive ? styles.sidebarButtonActive : ""
+            }`
+          }
+        >
           <RiMoneyDollarCircleLine />
           Simulador de Crédito
-        </button>
+        </NavLink>
+
         <button className={styles.sidebarButtons}>
           <FaCircleUser />
           Perfil
