@@ -39,10 +39,19 @@ export function SidebarBuyer() {
           Simulador de Crédito
         </NavLink>
 
-        <button className={styles.sidebarButtons}>
+        <NavLink
+          to="/user/buyer/user-profile"
+          end
+          className={({ isActive }) =>
+            `${styles.sidebarButtons} ${
+              isActive ? styles.sidebarButtonActive : ""
+            }`
+          }
+        >
           <FaCircleUser />
           Perfil
-        </button>
+        </NavLink>
+
         <button className={styles.sidebarButtons}>
           <GrDatabase />
           Solicitudes

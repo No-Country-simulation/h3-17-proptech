@@ -7,6 +7,7 @@ import {
   DashboardLayout,
   AvailablePlans,
   CreditSimulator,
+  UserProfile
 } from "../pages";
 
 export function RouterViews() {
@@ -28,6 +29,7 @@ export function RouterViews() {
         {/* Subruta predeterminada */}
         <Route index element={<AvailablePlans />} />
         <Route path="credit-simulator" element={<CreditSimulator />} />
+        <Route path="user-profile" element={<UserProfile />} />
       </Route>
     </Routes>
   );
