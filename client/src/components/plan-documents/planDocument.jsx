@@ -1,7 +1,9 @@
 import styles from "./planDocument.module.css";
 import { FaCloudUploadAlt } from "react-icons/fa";
 
-export function PlanDocument() {
+import { pdficon } from "../../assets";
+
+export function PlanDocument({ handleNextStep }) {
   return (
     <div className={styles.content}>
       <div className={styles.introductiontext}>
@@ -138,20 +140,53 @@ export function PlanDocument() {
           </ul>
         </div>
         <div className={styles.dataupload}>
-          <div>
+          <div className={styles.titletext}>
             <h4>Subir archivos</h4>
             <p>Selecciona y sube los documentos solicitados</p>
             <hr />
           </div>
-          <div>
+          <div className={styles.dragcontainer}>
             <FaCloudUploadAlt />
             <h4>Elija un archivo o arrástrelo y suéltelo aquí</h4>
             <p>FORMATOS JPG,PNG Y PDF</p>
+            <button className={styles.uploadbuttons}>Examinar archivos</button>
+          </div>
+          <div className={styles.archive}>
+            <div className={styles.docicon}>
+              <div className={styles.iconpdf}>
+                <img src={pdficon} className={styles.iconpdf} />
+              </div>
+
+              <div className={styles.textdoc}>
+                <h4>dni.jpg</h4>
+                <p>94kb</p>
+                <p style={{ color: "var(--Primario)" }}>Completado</p>
+              </div>
+              <div className={styles.closebutton}>
+                <p>x</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.archive}>
+            <div className={styles.docicon}>
+              <div className={styles.iconpdf}>
+                <img src={pdficon} className={styles.iconpdf} />
+              </div>
+
+              <div className={styles.textdoc}>
+                <h4>recibo.pdf</h4>
+                <p>94kb</p>
+                <p style={{ color: "var(--Primario)" }}>Completado</p>
+              </div>
+              <div className={styles.closebutton}>
+                <p>x</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className={styles.buttoncontainer}>
-        <button className={styles.buttonnext}>
+        <button className={styles.buttonnext} onClick={handleNextStep}>
           Continuar con la solicitud
         </button>
       </div>
