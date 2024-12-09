@@ -5,7 +5,7 @@ import { RegisterOptions } from "./register-options/registerOption";
 import { DashboardLayout } from "./dashboard-layout/dashboardLayout";
 import { AvailablePlans } from "./availablePlans/plansView";
 import { CreditSimulator } from "./creditSimulator/credit-simulator";
-
+import UserProfile from "./userProfile/userProfile";
 export {
   LandingPage,
   RegisterPage,
@@ -14,4 +14,5 @@ export {
   DashboardLayout,
   AvailablePlans,
   CreditSimulator,
+  UserProfile
 };
