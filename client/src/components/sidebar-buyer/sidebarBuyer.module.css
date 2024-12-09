@@ -51,5 +51,8 @@
 .sidebarButtonActive {
   background-color: var(--Primario-20);
   color: var(--Texto);
-  font-weight: bold; 
+  font-weight: bold;
+}
+.sidebarButtonActive a, .sidebarButtons a {
+  color: var(--Texto);
 }
