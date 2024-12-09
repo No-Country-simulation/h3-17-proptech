@@ -71,7 +71,7 @@ export function CreditSimulator() {
           </div>
 
           <div className="input-group">
-            <label>Ingresos</label>
+            <label>Infoautos</label>
             <input 
               type="number"
               value={monthlyPayment}
